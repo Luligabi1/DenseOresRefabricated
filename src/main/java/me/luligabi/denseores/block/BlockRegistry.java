@@ -24,7 +24,7 @@ public class BlockRegistry {
         initBlock("dense_emerald_ore", DENSE_EMERALD_ORE);
     }
 
-    // TODO: Add textures and loot tables
+    // TODO: Add loot tables
     public static final Block DENSE_COAL_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).requiresTool().breakByTool(FabricToolTags.PICKAXES, 0).strength(3.0F, 3.0F), UniformIntProvider.create(1, 4));
 
     public static final Block DENSE_COPPER_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).requiresTool().breakByTool(FabricToolTags.PICKAXES, 1).strength(3.0F, 3.0F));
@@ -42,6 +42,7 @@ public class BlockRegistry {
     public static final Block DENSE_EMERALD_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).requiresTool().strength(3.0F, 3.0F), UniformIntProvider.create(5, 9));
 
 
+    //TODO: Add deepslate variants
     private static void initBlock(String identifier, Block block) {
         Registry.register(Registry.BLOCK, new Identifier(DenseOres.MOD_ID, identifier), block);
         Registry.register(Registry.ITEM, new Identifier(DenseOres.MOD_ID, identifier), new BlockItem(block, new FabricItemSettings().group(DenseOres.ITEM_GROUP)));

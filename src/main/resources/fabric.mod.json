@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "denseores",
+  "version": "${version}",
+  "name": "Dense Ores: Refabricated",
+  "description": "dummy",
+  "authors": [
+    "Luligabi",
+    "rwtema"
+  ],
+  "contact": {
+    "homepage": "dummy",
+    "repo": "dummy",
+    "issues": "dummy"
+  },
+  "license": "MIT",
+  "icon": "assets/denseores/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "me.luligabi.denseores.DenseOresClient"
+    ],
+    "main": [
+      "me.luligabi.denseores.DenseOres"
+    ]
+  },
+  "mixins": [
+    "denseores.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.11.6",
+    "fabric": "*",
+    "minecraft": "1.17.1"
+  }
+}

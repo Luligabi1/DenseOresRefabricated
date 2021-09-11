@@ -4,6 +4,7 @@
   "package": "me.luligabi.denseores.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "BlocksInvoker"
   ],
   "client": [
   ],

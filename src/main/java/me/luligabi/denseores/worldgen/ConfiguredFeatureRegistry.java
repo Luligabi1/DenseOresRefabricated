@@ -1,6 +1,7 @@
 package me.luligabi.denseores.worldgen;
 
 import me.luligabi.denseores.DenseOres;
+import me.luligabi.denseores.block.BlockRegistry;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.minecraft.block.Blocks;
@@ -34,7 +35,7 @@ public class ConfiguredFeatureRegistry {
     private static final ConfiguredFeature<?, ?> DENSE_COAL_ORE = Feature.ORE
             .configure(new OreFeatureConfig(
                     new BlockMatchRuleTest(Blocks.COAL_ORE),
-                    Blocks.BEACON.getDefaultState(),
+                    BlockRegistry.DENSE_COAL_ORE.getDefaultState(),
                     6))
             .range(new RangeDecoratorConfig(
                     UniformHeightProvider.create(YOffset.getBottom(), YOffset.fixed(127))))
@@ -48,7 +49,7 @@ public class ConfiguredFeatureRegistry {
     private static final ConfiguredFeature<?, ?> DENSE_COPPER_ORE = Feature.ORE
             .configure(new OreFeatureConfig(
                     new BlockMatchRuleTest(Blocks.COPPER_ORE),
-                    Blocks.BEACON.getDefaultState(),
+                    BlockRegistry.DENSE_COPPER_ORE.getDefaultState(),
                     6))
             .triangleRange(YOffset.fixed(0), YOffset.fixed(96))
             .spreadHorizontally()
@@ -61,7 +62,7 @@ public class ConfiguredFeatureRegistry {
     private static final ConfiguredFeature<?, ?> DENSE_IRON_ORE = Feature.ORE
             .configure(new OreFeatureConfig(
                     new BlockMatchRuleTest(Blocks.IRON_ORE),
-                    Blocks.BEACON.getDefaultState(),
+                    BlockRegistry.DENSE_IRON_ORE.getDefaultState(),
                     4))
             .uniformRange(YOffset.getBottom(), YOffset.fixed(63))
             .spreadHorizontally()
@@ -74,7 +75,7 @@ public class ConfiguredFeatureRegistry {
     private static final ConfiguredFeature<?, ?> DENSE_GOLD_ORE = Feature.ORE
             .configure(new OreFeatureConfig(
                     new BlockMatchRuleTest(Blocks.GOLD_ORE),
-                    Blocks.BEACON.getDefaultState(),
+                    BlockRegistry.DENSE_GOLD_ORE.getDefaultState(),
                     3))
             .uniformRange(YOffset.getBottom(), YOffset.fixed(31))
             .spreadHorizontally()
@@ -87,7 +88,7 @@ public class ConfiguredFeatureRegistry {
     private static final ConfiguredFeature<?, ?> DENSE_REDSTONE_ORE = Feature.ORE
             .configure(new OreFeatureConfig(
                     new BlockMatchRuleTest(Blocks.REDSTONE_ORE),
-                    Blocks.BEACON.getDefaultState(),
+                    BlockRegistry.DENSE_REDSTONE_ORE.getDefaultState(),
                     6))
             .uniformRange(YOffset.getBottom(), YOffset.fixed(15))
             .spreadHorizontally()
@@ -100,7 +101,7 @@ public class ConfiguredFeatureRegistry {
     private static final ConfiguredFeature<?, ?> DENSE_LAPIS_ORE = Feature.ORE
             .configure(new OreFeatureConfig(
                     new BlockMatchRuleTest(Blocks.LAPIS_ORE),
-                    Blocks.BEACON.getDefaultState(),
+                    BlockRegistry.DENSE_LAPIS_ORE.getDefaultState(),
                     6))
             .triangleRange(YOffset.fixed(0), YOffset.fixed(30))
             .spreadHorizontally()
@@ -113,7 +114,7 @@ public class ConfiguredFeatureRegistry {
     private static final ConfiguredFeature<?, ?> DENSE_DIAMOND_ORE = Feature.ORE
             .configure(new OreFeatureConfig(
                     new BlockMatchRuleTest(Blocks.DIAMOND_ORE),
-                    Blocks.BEACON.getDefaultState(),
+                    BlockRegistry.DENSE_DIAMOND_ORE.getDefaultState(),
                     1))
             .uniformRange(YOffset.getBottom(), YOffset.fixed(15))
             .spreadHorizontally()
@@ -126,7 +127,7 @@ public class ConfiguredFeatureRegistry {
     private static final ConfiguredFeature<?, ?> DENSE_EMERALD_ORE = Feature.ORE
             .configure(new OreFeatureConfig(
                     new BlockMatchRuleTest(Blocks.EMERALD_ORE),
-                    Blocks.BEACON.getDefaultState(),
+                    BlockRegistry.DENSE_EMERALD_ORE.getDefaultState(),
                     3))
             .uniformRange(YOffset.fixed(4), YOffset.fixed(31))
             .spreadHorizontally()

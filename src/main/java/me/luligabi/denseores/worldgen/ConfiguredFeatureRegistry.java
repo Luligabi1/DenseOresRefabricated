@@ -29,6 +29,13 @@ public class ConfiguredFeatureRegistry {
         registerFeature(DENSE_LAPIS_KEY, DENSE_LAPIS_ORE);
         registerFeature(DENSE_DIAMOND_KEY, DENSE_DIAMOND_ORE);
         registerFeature(DENSE_EMERALD_KEY, DENSE_EMERALD_ORE);
+
+        // Deepslate variants; Coal, Copper and Emerald deepslate ores don't generate at normal circumstances.
+        registerFeature(DENSE_DEEPSLATE_IRON_KEY, DENSE_DEEPSLATE_IRON_ORE);
+        registerFeature(DENSE_DEEPSLATE_GOLD_KEY, DENSE_DEEPSLATE_GOLD_ORE);
+        registerFeature(DENSE_DEEPSLATE_REDSTONE_KEY, DENSE_DEEPSLATE_REDSTONE_ORE);
+        registerFeature(DENSE_DEEPSLATE_LAPIS_KEY, DENSE_DEEPSLATE_LAPIS_ORE);
+        registerFeature(DENSE_DEEPSLATE_DIAMOND_KEY, DENSE_DEEPSLATE_DIAMOND_ORE);
     }
 
     // Dense Coal
@@ -137,6 +144,72 @@ public class ConfiguredFeatureRegistry {
             new Identifier(DenseOres.MOD_ID, "dense_emerald_ore"));
 
 
+    // Dense Deepslate Iron
+    private static final ConfiguredFeature<?, ?> DENSE_DEEPSLATE_IRON_ORE = Feature.ORE
+            .configure(new OreFeatureConfig(
+                    new BlockMatchRuleTest(Blocks.DEEPSLATE_IRON_ORE),
+                    BlockRegistry.DENSE_DEEPSLATE_IRON_ORE.getDefaultState(),
+                    4))
+            .uniformRange(YOffset.getBottom(), YOffset.fixed(63))
+            .spreadHorizontally()
+            .repeat(5);
+
+    private static final RegistryKey<ConfiguredFeature<?, ?>> DENSE_DEEPSLATE_IRON_KEY = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+            new Identifier(DenseOres.MOD_ID, "dense_deepslate_iron_ore"));
+
+    // Dense Deepslate Gold
+    private static final ConfiguredFeature<?, ?> DENSE_DEEPSLATE_GOLD_ORE = Feature.ORE
+            .configure(new OreFeatureConfig(
+                    new BlockMatchRuleTest(Blocks.DEEPSLATE_GOLD_ORE),
+                    BlockRegistry.DENSE_DEEPSLATE_GOLD_ORE.getDefaultState(),
+                    3))
+            .uniformRange(YOffset.getBottom(), YOffset.fixed(31))
+            .spreadHorizontally()
+            .repeat(2);
+
+    private static final RegistryKey<ConfiguredFeature<?, ?>> DENSE_DEEPSLATE_GOLD_KEY = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+            new Identifier(DenseOres.MOD_ID, "dense_deepslate_gold_ore"));
+
+    // Dense Deepslate Redstone
+    private static final ConfiguredFeature<?, ?> DENSE_DEEPSLATE_REDSTONE_ORE = Feature.ORE
+            .configure(new OreFeatureConfig(
+                    new BlockMatchRuleTest(Blocks.DEEPSLATE_REDSTONE_ORE),
+                    BlockRegistry.DENSE_DEEPSLATE_REDSTONE_ORE.getDefaultState(),
+                    6))
+            .uniformRange(YOffset.getBottom(), YOffset.fixed(15))
+            .spreadHorizontally()
+            .repeat(6);
+
+    private static final RegistryKey<ConfiguredFeature<?, ?>> DENSE_DEEPSLATE_REDSTONE_KEY = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+            new Identifier(DenseOres.MOD_ID, "dense_deepslate_redstone_ore"));
+
+    // Dense Deepslate Lapis
+    private static final ConfiguredFeature<?, ?> DENSE_DEEPSLATE_LAPIS_ORE = Feature.ORE
+            .configure(new OreFeatureConfig(
+                    new BlockMatchRuleTest(Blocks.DEEPSLATE_LAPIS_ORE),
+                    BlockRegistry.DENSE_DEEPSLATE_LAPIS_ORE.getDefaultState(),
+                    6))
+            .triangleRange(YOffset.fixed(0), YOffset.fixed(30))
+            .spreadHorizontally()
+            .repeat(6);
+
+    private static final RegistryKey<ConfiguredFeature<?, ?>> DENSE_DEEPSLATE_LAPIS_KEY = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+            new Identifier(DenseOres.MOD_ID, "dense_deepslate_lapis_ore"));
+
+    // Dense Deepslate Diamond
+    private static final ConfiguredFeature<?, ?> DENSE_DEEPSLATE_DIAMOND_ORE = Feature.ORE
+            .configure(new OreFeatureConfig(
+                    new BlockMatchRuleTest(Blocks.DEEPSLATE_DIAMOND_ORE),
+                    BlockRegistry.DENSE_DEEPSLATE_DIAMOND_ORE.getDefaultState(),
+                    1))
+            .uniformRange(YOffset.getBottom(), YOffset.fixed(15))
+            .spreadHorizontally()
+            .repeat(2);
+
+    private static final RegistryKey<ConfiguredFeature<?, ?>> DENSE_DEEPSLATE_DIAMOND_KEY = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+            new Identifier(DenseOres.MOD_ID, "dense_deepslate_diamond_ore"));
+
+    @SuppressWarnings("deprecation")
     private static void registerFeature(RegistryKey<ConfiguredFeature<?, ?>> registryKey, ConfiguredFeature<?, ?> configuredFeature) {
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, registryKey.getValue(), configuredFeature);
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_DECORATION, registryKey);

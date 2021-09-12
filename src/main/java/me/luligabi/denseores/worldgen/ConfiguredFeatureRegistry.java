@@ -150,7 +150,7 @@ public class ConfiguredFeatureRegistry {
                     new BlockMatchRuleTest(Blocks.DEEPSLATE_IRON_ORE),
                     BlockRegistry.DENSE_DEEPSLATE_IRON_ORE.getDefaultState(),
                     4))
-            .uniformRange(YOffset.getBottom(), YOffset.fixed(63))
+            .uniformRange(YOffset.getBottom(), YOffset.fixed(16))
             .spreadHorizontally()
             .repeat(5);
 
@@ -163,7 +163,7 @@ public class ConfiguredFeatureRegistry {
                     new BlockMatchRuleTest(Blocks.DEEPSLATE_GOLD_ORE),
                     BlockRegistry.DENSE_DEEPSLATE_GOLD_ORE.getDefaultState(),
                     3))
-            .uniformRange(YOffset.getBottom(), YOffset.fixed(31))
+            .uniformRange(YOffset.getBottom(), YOffset.fixed(16))
             .spreadHorizontally()
             .repeat(2);
 
@@ -176,7 +176,7 @@ public class ConfiguredFeatureRegistry {
                     new BlockMatchRuleTest(Blocks.DEEPSLATE_REDSTONE_ORE),
                     BlockRegistry.DENSE_DEEPSLATE_REDSTONE_ORE.getDefaultState(),
                     6))
-            .uniformRange(YOffset.getBottom(), YOffset.fixed(15))
+            .uniformRange(YOffset.getBottom(), YOffset.fixed(16))
             .spreadHorizontally()
             .repeat(6);
 
@@ -189,7 +189,7 @@ public class ConfiguredFeatureRegistry {
                     new BlockMatchRuleTest(Blocks.DEEPSLATE_LAPIS_ORE),
                     BlockRegistry.DENSE_DEEPSLATE_LAPIS_ORE.getDefaultState(),
                     6))
-            .triangleRange(YOffset.fixed(0), YOffset.fixed(30))
+            .triangleRange(YOffset.fixed(0), YOffset.fixed(16))
             .spreadHorizontally()
             .repeat(6);
 
@@ -202,7 +202,7 @@ public class ConfiguredFeatureRegistry {
                     new BlockMatchRuleTest(Blocks.DEEPSLATE_DIAMOND_ORE),
                     BlockRegistry.DENSE_DEEPSLATE_DIAMOND_ORE.getDefaultState(),
                     1))
-            .uniformRange(YOffset.getBottom(), YOffset.fixed(15))
+            .uniformRange(YOffset.getBottom(), YOffset.fixed(16))
             .spreadHorizontally()
             .repeat(2);
 

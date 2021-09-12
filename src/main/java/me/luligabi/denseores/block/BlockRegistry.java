@@ -69,7 +69,8 @@ public class BlockRegistry {
 
     public static final Block DENSE_DEEPSLATE_EMERALD_ORE = new OreBlock(AbstractBlock.Settings.copy(DENSE_EMERALD_ORE).sounds(BlockSoundGroup.DEEPSLATE));
 
-    // TODO: Fix deepslate variant strength & add textures
+    // TODO: Fix deepslate variant strength
+    // TODO: Add nether dense ores
     private static void initBlock(String identifier, Block block) {
         Registry.register(Registry.BLOCK, new Identifier(DenseOres.MOD_ID, identifier), block);
         Registry.register(Registry.ITEM, new Identifier(DenseOres.MOD_ID, identifier), new BlockItem(block, new FabricItemSettings().group(DenseOres.ITEM_GROUP)));

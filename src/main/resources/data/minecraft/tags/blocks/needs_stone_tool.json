@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "denseores:dense_copper_ore",
+    "denseores:dense_iron_ore",
+    "denseores:dense_lapis_ore",
+
+    "denseores:dense_deepslate_copper_ore",
+    "denseores:dense_deepslate_iron_ore",
+    "denseores:dense_deepslate_lapis_ore"
+  ]
+}

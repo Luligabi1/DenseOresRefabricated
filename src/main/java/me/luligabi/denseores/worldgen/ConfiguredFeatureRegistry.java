@@ -47,7 +47,7 @@ public class ConfiguredFeatureRegistry {
             .range(new RangeDecoratorConfig(
                     UniformHeightProvider.create(YOffset.getBottom(), YOffset.fixed(127))))
             .spreadHorizontally()
-            .repeat(8);
+            .repeat(10);
 
     private static final RegistryKey<ConfiguredFeature<?, ?>> DENSE_COAL_KEY = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
             new Identifier(DenseOres.MOD_ID, "dense_coal_ore"));
@@ -60,7 +60,7 @@ public class ConfiguredFeatureRegistry {
                     6))
             .triangleRange(YOffset.fixed(0), YOffset.fixed(96))
             .spreadHorizontally()
-            .repeat(6);
+            .repeat(10);
 
     private static final RegistryKey<ConfiguredFeature<?, ?>> DENSE_COPPER_KEY = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
             new Identifier(DenseOres.MOD_ID, "dense_copper_ore"));
@@ -73,7 +73,7 @@ public class ConfiguredFeatureRegistry {
                     4))
             .uniformRange(YOffset.getBottom(), YOffset.fixed(63))
             .spreadHorizontally()
-            .repeat(5);
+            .repeat(8);
 
     private static final RegistryKey<ConfiguredFeature<?, ?>> DENSE_IRON_KEY = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
             new Identifier(DenseOres.MOD_ID, "dense_iron_ore"));
@@ -86,7 +86,7 @@ public class ConfiguredFeatureRegistry {
                     3))
             .uniformRange(YOffset.getBottom(), YOffset.fixed(31))
             .spreadHorizontally()
-            .repeat(2);
+            .repeat(5);
 
     private static final RegistryKey<ConfiguredFeature<?, ?>> DENSE_GOLD_KEY = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
             new Identifier(DenseOres.MOD_ID, "dense_gold_ore"));
@@ -125,7 +125,7 @@ public class ConfiguredFeatureRegistry {
                     1))
             .uniformRange(YOffset.getBottom(), YOffset.fixed(15))
             .spreadHorizontally()
-            .repeat(2);
+            .repeat(4);
 
     private static final RegistryKey<ConfiguredFeature<?, ?>> DENSE_DIAMOND_KEY = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
             new Identifier(DenseOres.MOD_ID, "dense_diamond_ore"));
@@ -138,7 +138,7 @@ public class ConfiguredFeatureRegistry {
                     3))
             .uniformRange(YOffset.fixed(4), YOffset.fixed(31))
             .spreadHorizontally()
-            .repeat(2);
+            .repeat(4);
 
     private static final RegistryKey<ConfiguredFeature<?, ?>> DENSE_EMERALD_KEY = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
             new Identifier(DenseOres.MOD_ID, "dense_emerald_ore"));
@@ -152,7 +152,7 @@ public class ConfiguredFeatureRegistry {
                     4))
             .uniformRange(YOffset.getBottom(), YOffset.fixed(16))
             .spreadHorizontally()
-            .repeat(5);
+            .repeat(8);
 
     private static final RegistryKey<ConfiguredFeature<?, ?>> DENSE_DEEPSLATE_IRON_KEY = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
             new Identifier(DenseOres.MOD_ID, "dense_deepslate_iron_ore"));
@@ -162,7 +162,7 @@ public class ConfiguredFeatureRegistry {
             .configure(new OreFeatureConfig(
                     new BlockMatchRuleTest(Blocks.DEEPSLATE_GOLD_ORE),
                     BlockRegistry.DENSE_DEEPSLATE_GOLD_ORE.getDefaultState(),
-                    3))
+                    5))
             .uniformRange(YOffset.getBottom(), YOffset.fixed(16))
             .spreadHorizontally()
             .repeat(2);
@@ -204,7 +204,7 @@ public class ConfiguredFeatureRegistry {
                     1))
             .uniformRange(YOffset.getBottom(), YOffset.fixed(16))
             .spreadHorizontally()
-            .repeat(2);
+            .repeat(4);
 
     private static final RegistryKey<ConfiguredFeature<?, ?>> DENSE_DEEPSLATE_DIAMOND_KEY = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
             new Identifier(DenseOres.MOD_ID, "dense_deepslate_diamond_ore"));

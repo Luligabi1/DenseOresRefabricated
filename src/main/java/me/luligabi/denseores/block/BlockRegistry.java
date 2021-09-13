@@ -35,8 +35,7 @@ public class BlockRegistry {
 
     }
 
-    // TODO: Add loot tables
-    public static final Block DENSE_COAL_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).breakByTool(FabricToolTags.PICKAXES, 0).strength(3.0F, 3.0F), UniformIntProvider.create(1, 4));
+    public static final Block DENSE_COAL_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).requiresTool().breakByTool(FabricToolTags.PICKAXES, 0).strength(3.0F, 3.0F), UniformIntProvider.create(1, 4));
 
     public static final Block DENSE_COPPER_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).requiresTool().breakByTool(FabricToolTags.PICKAXES, 1).strength(3.0F, 3.0F));
 
@@ -53,21 +52,21 @@ public class BlockRegistry {
     public static final Block DENSE_EMERALD_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).requiresTool().breakByTool(FabricToolTags.PICKAXES, 2).strength(3.0F, 3.0F), UniformIntProvider.create(5, 9));
 
     // Deepslate variants
-    public static final Block DENSE_DEEPSLATE_COAL_ORE = new OreBlock(AbstractBlock.Settings.copy(DENSE_COAL_ORE).sounds(BlockSoundGroup.DEEPSLATE), UniformIntProvider.create(1, 4));
+    public static final Block DENSE_DEEPSLATE_COAL_ORE = new OreBlock(AbstractBlock.Settings.copy(DENSE_COAL_ORE).strength(4.5F, 3.0F).sounds(BlockSoundGroup.DEEPSLATE), UniformIntProvider.create(1, 4));
 
-    public static final Block DENSE_DEEPSLATE_COPPER_ORE = new OreBlock(AbstractBlock.Settings.copy(DENSE_COPPER_ORE).sounds(BlockSoundGroup.DEEPSLATE));
+    public static final Block DENSE_DEEPSLATE_COPPER_ORE = new OreBlock(AbstractBlock.Settings.copy(DENSE_COPPER_ORE).strength(4.5F, 3.0F).sounds(BlockSoundGroup.DEEPSLATE));
 
-    public static final Block DENSE_DEEPSLATE_IRON_ORE = new OreBlock(AbstractBlock.Settings.copy(DENSE_IRON_ORE).sounds(BlockSoundGroup.DEEPSLATE));
+    public static final Block DENSE_DEEPSLATE_IRON_ORE = new OreBlock(AbstractBlock.Settings.copy(DENSE_IRON_ORE).strength(4.5F, 3.0F).sounds(BlockSoundGroup.DEEPSLATE));
 
-    public static final Block DENSE_DEEPSLATE_GOLD_ORE = new OreBlock(AbstractBlock.Settings.copy(DENSE_GOLD_ORE).sounds(BlockSoundGroup.DEEPSLATE));
+    public static final Block DENSE_DEEPSLATE_GOLD_ORE = new OreBlock(AbstractBlock.Settings.copy(DENSE_GOLD_ORE).strength(4.5F, 3.0F).sounds(BlockSoundGroup.DEEPSLATE));
 
-    public static final Block DENSE_DEEPSLATE_REDSTONE_ORE = new RedstoneOreBlock(AbstractBlock.Settings.copy(DENSE_REDSTONE_ORE).sounds(BlockSoundGroup.DEEPSLATE));
+    public static final Block DENSE_DEEPSLATE_REDSTONE_ORE = new RedstoneOreBlock(AbstractBlock.Settings.copy(DENSE_REDSTONE_ORE).strength(4.5F, 3.0F).sounds(BlockSoundGroup.DEEPSLATE));
 
-    public static final Block DENSE_DEEPSLATE_LAPIS_ORE = new OreBlock(AbstractBlock.Settings.copy(DENSE_LAPIS_ORE).sounds(BlockSoundGroup.DEEPSLATE), UniformIntProvider.create(4, 7));
+    public static final Block DENSE_DEEPSLATE_LAPIS_ORE = new OreBlock(AbstractBlock.Settings.copy(DENSE_LAPIS_ORE).strength(4.5F, 3.0F).sounds(BlockSoundGroup.DEEPSLATE), UniformIntProvider.create(4, 7));
 
-    public static final Block DENSE_DEEPSLATE_DIAMOND_ORE = new OreBlock(AbstractBlock.Settings.copy(DENSE_DIAMOND_ORE).sounds(BlockSoundGroup.DEEPSLATE), UniformIntProvider.create(5, 9));
+    public static final Block DENSE_DEEPSLATE_DIAMOND_ORE = new OreBlock(AbstractBlock.Settings.copy(DENSE_DIAMOND_ORE).strength(4.5F, 3.0F).sounds(BlockSoundGroup.DEEPSLATE), UniformIntProvider.create(5, 9));
 
-    public static final Block DENSE_DEEPSLATE_EMERALD_ORE = new OreBlock(AbstractBlock.Settings.copy(DENSE_EMERALD_ORE).sounds(BlockSoundGroup.DEEPSLATE), UniformIntProvider.create(5, 9));
+    public static final Block DENSE_DEEPSLATE_EMERALD_ORE = new OreBlock(AbstractBlock.Settings.copy(DENSE_EMERALD_ORE).strength(4.5F, 3.0F).sounds(BlockSoundGroup.DEEPSLATE), UniformIntProvider.create(5, 9));
 
     // TODO: Add dense nether ores
     private static void initBlock(String identifier, Block block) {

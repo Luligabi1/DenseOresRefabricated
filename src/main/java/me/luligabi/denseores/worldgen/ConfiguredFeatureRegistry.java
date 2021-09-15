@@ -14,6 +14,7 @@ import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.YOffset;
 import net.minecraft.world.gen.decorator.RangeDecoratorConfig;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
+import net.minecraft.world.gen.feature.ConfiguredFeatures;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
 import net.minecraft.world.gen.heightprovider.UniformHeightProvider;
@@ -21,21 +22,26 @@ import net.minecraft.world.gen.heightprovider.UniformHeightProvider;
 public class ConfiguredFeatureRegistry {
 
     public static void init() {
-        registerFeature(DENSE_COAL_KEY, DENSE_COAL_ORE);
-        registerFeature(DENSE_COPPER_KEY, DENSE_COPPER_ORE);
-        registerFeature(DENSE_IRON_KEY, DENSE_IRON_ORE);
-        registerFeature(DENSE_GOLD_KEY, DENSE_GOLD_ORE);
-        registerFeature(DENSE_REDSTONE_KEY, DENSE_REDSTONE_ORE);
-        registerFeature(DENSE_LAPIS_KEY, DENSE_LAPIS_ORE);
-        registerFeature(DENSE_DIAMOND_KEY, DENSE_DIAMOND_ORE);
-        registerFeature(DENSE_EMERALD_KEY, DENSE_EMERALD_ORE);
+        registerOverworldFeature(DENSE_COAL_KEY, DENSE_COAL_ORE);
+        registerOverworldFeature(DENSE_COPPER_KEY, DENSE_COPPER_ORE);
+        registerOverworldFeature(DENSE_IRON_KEY, DENSE_IRON_ORE);
+        registerOverworldFeature(DENSE_GOLD_KEY, DENSE_GOLD_ORE);
+        registerOverworldFeature(DENSE_REDSTONE_KEY, DENSE_REDSTONE_ORE);
+        registerOverworldFeature(DENSE_LAPIS_KEY, DENSE_LAPIS_ORE);
+        registerOverworldFeature(DENSE_DIAMOND_KEY, DENSE_DIAMOND_ORE);
+        registerOverworldFeature(DENSE_EMERALD_KEY, DENSE_EMERALD_ORE);
 
         // Deepslate variants; Coal, Copper and Emerald deepslate ores don't generate at normal circumstances.
-        registerFeature(DENSE_DEEPSLATE_IRON_KEY, DENSE_DEEPSLATE_IRON_ORE);
-        registerFeature(DENSE_DEEPSLATE_GOLD_KEY, DENSE_DEEPSLATE_GOLD_ORE);
-        registerFeature(DENSE_DEEPSLATE_REDSTONE_KEY, DENSE_DEEPSLATE_REDSTONE_ORE);
-        registerFeature(DENSE_DEEPSLATE_LAPIS_KEY, DENSE_DEEPSLATE_LAPIS_ORE);
-        registerFeature(DENSE_DEEPSLATE_DIAMOND_KEY, DENSE_DEEPSLATE_DIAMOND_ORE);
+        registerOverworldFeature(DENSE_DEEPSLATE_IRON_KEY, DENSE_DEEPSLATE_IRON_ORE);
+        registerOverworldFeature(DENSE_DEEPSLATE_GOLD_KEY, DENSE_DEEPSLATE_GOLD_ORE);
+        registerOverworldFeature(DENSE_DEEPSLATE_REDSTONE_KEY, DENSE_DEEPSLATE_REDSTONE_ORE);
+        registerOverworldFeature(DENSE_DEEPSLATE_LAPIS_KEY, DENSE_DEEPSLATE_LAPIS_ORE);
+        registerOverworldFeature(DENSE_DEEPSLATE_DIAMOND_KEY, DENSE_DEEPSLATE_DIAMOND_ORE);
+
+        // Nether Ores
+        registerNetherFeature(DENSE_NETHER_QUARTZ_KEY, DENSE_NETHER_QUARTZ_ORE);
+        registerNetherFeature(DENSE_NETHER_GOLD_KEY, DENSE_NETHER_GOLD_ORE);
+        registerNetherFeature(DENSE_ANCIENT_DEBRIS_KEY, DENSE_ANCIENT_DEBRIS);
     }
 
     // Dense Coal
@@ -209,10 +215,55 @@ public class ConfiguredFeatureRegistry {
     private static final RegistryKey<ConfiguredFeature<?, ?>> DENSE_DEEPSLATE_DIAMOND_KEY = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
             new Identifier(DenseOres.MOD_ID, "dense_deepslate_diamond_ore"));
 
+
+    // Dense Nether Quartz
+    private static final ConfiguredFeature<?, ?> DENSE_NETHER_QUARTZ_ORE = Feature.ORE
+            .configure(new OreFeatureConfig(
+                    new BlockMatchRuleTest(Blocks.NETHER_QUARTZ_ORE),
+                    Blocks.BEACON.getDefaultState(),
+                    7))
+            .range(ConfiguredFeatures.Decorators.BOTTOM_TO_TOP_OFFSET_10)
+            .spreadHorizontally()
+            .repeat(12);
+
+    private static final RegistryKey<ConfiguredFeature<?, ?>> DENSE_NETHER_QUARTZ_KEY = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+            new Identifier(DenseOres.MOD_ID, "dense_nether_quartz_ore"));
+
+    // Dense Nether Gold
+    private static final ConfiguredFeature<?, ?> DENSE_NETHER_GOLD_ORE = Feature.ORE
+            .configure(new OreFeatureConfig(
+                    new BlockMatchRuleTest(Blocks.NETHER_GOLD_ORE),
+                    Blocks.BEACON.getDefaultState(),
+                    5))
+            .range(ConfiguredFeatures.Decorators.BOTTOM_TO_TOP_OFFSET_10)
+            .spreadHorizontally()
+            .repeat(5);
+
+    private static final RegistryKey<ConfiguredFeature<?, ?>> DENSE_NETHER_GOLD_KEY = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+            new Identifier(DenseOres.MOD_ID, "dense_nether_gold_ore"));
+
+    // Dense Ancient Debris
+    private static final ConfiguredFeature<?, ?> DENSE_ANCIENT_DEBRIS = Feature.ORE
+            .configure(new OreFeatureConfig(
+                    new BlockMatchRuleTest(Blocks.ANCIENT_DEBRIS),
+                    Blocks.BEACON.getDefaultState(),
+                    1, 1.0F))
+            .triangleRange(YOffset.fixed(8), YOffset.fixed(24))
+            .spreadHorizontally();
+
+    private static final RegistryKey<ConfiguredFeature<?, ?>> DENSE_ANCIENT_DEBRIS_KEY = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+            new Identifier(DenseOres.MOD_ID, "dense_ancient_debris"));
+
     @SuppressWarnings("deprecation")
-    private static void registerFeature(RegistryKey<ConfiguredFeature<?, ?>> registryKey, ConfiguredFeature<?, ?> configuredFeature) {
+    private static void registerOverworldFeature(RegistryKey<ConfiguredFeature<?, ?>> registryKey, ConfiguredFeature<?, ?> configuredFeature) {
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, registryKey.getValue(), configuredFeature);
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_DECORATION, registryKey);
+    }
+
+    @SuppressWarnings("deprecation")
+    private static void registerNetherFeature(RegistryKey<ConfiguredFeature<?, ?>> registryKey, ConfiguredFeature<?, ?> configuredFeature) {
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, registryKey.getValue(), configuredFeature);
+        BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Feature.UNDERGROUND_DECORATION, registryKey);
     }
 
 }

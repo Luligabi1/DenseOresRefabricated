@@ -19,6 +19,7 @@
 
   "block.denseores.dense_nether_quartz_ore": "Dense Nether Quartz Ore",
   "block.denseores.dense_nether_gold_ore": "Dense Nether Gold Ore",
+  "block.denseores.dense_ancient_debris": "Dense Ancient Debris",
 
 
   "itemGroup.denseores.item_group": "Dense Ores: Refabricated"

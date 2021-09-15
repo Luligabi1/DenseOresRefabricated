@@ -220,7 +220,7 @@ public class ConfiguredFeatureRegistry {
     private static final ConfiguredFeature<?, ?> DENSE_NETHER_QUARTZ_ORE = Feature.ORE
             .configure(new OreFeatureConfig(
                     new BlockMatchRuleTest(Blocks.NETHER_QUARTZ_ORE),
-                    Blocks.BEACON.getDefaultState(),
+                    BlockRegistry.DENSE_NETHER_QUARTZ_ORE.getDefaultState(),
                     7))
             .range(ConfiguredFeatures.Decorators.BOTTOM_TO_TOP_OFFSET_10)
             .spreadHorizontally()
@@ -233,7 +233,7 @@ public class ConfiguredFeatureRegistry {
     private static final ConfiguredFeature<?, ?> DENSE_NETHER_GOLD_ORE = Feature.ORE
             .configure(new OreFeatureConfig(
                     new BlockMatchRuleTest(Blocks.NETHER_GOLD_ORE),
-                    Blocks.BEACON.getDefaultState(),
+                    BlockRegistry.DENSE_NETHER_GOLD_ORE.getDefaultState(),
                     5))
             .range(ConfiguredFeatures.Decorators.BOTTOM_TO_TOP_OFFSET_10)
             .spreadHorizontally()
@@ -246,7 +246,7 @@ public class ConfiguredFeatureRegistry {
     private static final ConfiguredFeature<?, ?> DENSE_ANCIENT_DEBRIS = Feature.ORE
             .configure(new OreFeatureConfig(
                     new BlockMatchRuleTest(Blocks.ANCIENT_DEBRIS),
-                    Blocks.BEACON.getDefaultState(),
+                    BlockRegistry.DENSE_ANCIENT_DEBRIS.getDefaultState(),
                     1, 1.0F))
             .triangleRange(YOffset.fixed(8), YOffset.fixed(24))
             .spreadHorizontally();

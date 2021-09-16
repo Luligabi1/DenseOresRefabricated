@@ -38,6 +38,7 @@ public class BlockRegistry {
         initBlock("dense_ancient_debris", DENSE_ANCIENT_DEBRIS);
     }
 
+    // Overworld Ores
     public static final Block DENSE_COAL_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).requiresTool().breakByTool(FabricToolTags.PICKAXES, 0).strength(3.0F, 3.0F), UniformIntProvider.create(1, 4));
 
     public static final Block DENSE_COPPER_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).requiresTool().breakByTool(FabricToolTags.PICKAXES, 1).strength(3.0F, 3.0F));

@@ -75,9 +75,9 @@ public class BlockRegistry {
     // Nether Ores
     public static final Block DENSE_NETHER_QUARTZ_ORE = new OreBlock(FabricBlockSettings.copy(Blocks.NETHER_QUARTZ_ORE), UniformIntProvider.create(4, 7));
 
-    public static final Block DENSE_NETHER_GOLD_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE, MapColor.DARK_RED).requiresTool().breakByTool(FabricToolTags.PICKAXES, 2).strength(3.0F, 3.0F).sounds(BlockSoundGroup.NETHER_GOLD_ORE), UniformIntProvider.create(1, 3));
+    public static final Block DENSE_NETHER_GOLD_ORE = new OreBlock(FabricBlockSettings.copy(Blocks.NETHER_GOLD_ORE), UniformIntProvider.create(1, 3));
 
-    public static final Block DENSE_ANCIENT_DEBRIS = new Block(FabricBlockSettings.copy(Blocks.ANCIENT_DEBRIS));
+    public static final Block DENSE_ANCIENT_DEBRIS = new Block(FabricBlockSettings.of(Material.METAL, MapColor.BLACK).requiresTool().breakByTool(FabricToolTags.PICKAXES, 3).strength(30.0F, 1200.0F).sounds(BlockSoundGroup.ANCIENT_DEBRIS));
 
     private static void initBlock(String identifier, Block block) {
         Registry.register(Registry.BLOCK, new Identifier(DenseOres.MOD_ID, identifier), block);

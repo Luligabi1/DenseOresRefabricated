@@ -25,7 +25,7 @@
                   }
                 }
               ],
-              "name": "denseores:dense_deepslate_iron_ore"
+              "name": "denseores:dense_nether_gold_ore"
             },
             {
               "type": "minecraft:item",
@@ -34,8 +34,8 @@
                   "function": "minecraft:set_count",
                   "count": {
                     "type": "minecraft:uniform",
-                    "min": 3.0,
-                    "max": 3.0
+                    "min": 6.0,
+                    "max": 18.0
                   },
                   "add": false
                 },
@@ -48,7 +48,7 @@
                   "function": "minecraft:explosion_decay"
                 }
               ],
-              "name": "minecraft:raw_iron"
+              "name": "minecraft:gold_nugget"
             }
           ]
         }

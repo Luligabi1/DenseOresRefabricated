@@ -1,0 +1,26 @@
+{
+  "block.denseores.dense_coal_ore": "Minério de Carvão Denso",
+  "block.denseores.dense_copper_ore": "Minério de Cobre Denso",
+  "block.denseores.dense_iron_ore": "Minério de Ferro Denso",
+  "block.denseores.dense_gold_ore": "Minério de Ouro Denso",
+  "block.denseores.dense_redstone_ore": "Minério de Redstone Denso",
+  "block.denseores.dense_lapis_ore": "Minério de Lápis-Lazúli Denso",
+  "block.denseores.dense_diamond_ore": "Minério de Diamante Denso",
+  "block.denseores.dense_emerald_ore": "Minério de Esmeralda Denso",
+
+  "block.denseores.dense_deepslate_coal_ore": "Minério de Carvão de Ardósia Denso",
+  "block.denseores.dense_deepslate_copper_ore": "Minério de Cobre de Ardósia Denso",
+  "block.denseores.dense_deepslate_iron_ore": "Minério de Ferro de Ardósia Denso",
+  "block.denseores.dense_deepslate_gold_ore": "Minério de Ouro de Ardósia Denso",
+  "block.denseores.dense_deepslate_redstone_ore": "Minério de Redstone de Ardósia Denso",
+  "block.denseores.dense_deepslate_lapis_ore": "Minério de Lápis-Lazúli de Ardósia Denso",
+  "block.denseores.dense_deepslate_diamond_ore": "Minério de Diamante de Ardósia Denso",
+  "block.denseores.dense_deepslate_emerald_ore": "Minério de Esmeralda de Ardósia Denso",
+
+  "block.denseores.dense_nether_quartz_ore": "Minério de Quartzo Denso",
+  "block.denseores.dense_nether_gold_ore": "Minério de Ouro do Nether Denso",
+  "block.denseores.dense_ancient_debris": "Detritos Ancestrais Densos",
+
+
+  "itemGroup.denseores.item_group": "Dense Ores: Refabricated"
+}

@@ -17,6 +17,10 @@
     "denseores:dense_deepslate_redstone_ore",
     "denseores:dense_deepslate_lapis_ore",
     "denseores:dense_deepslate_diamond_ore",
-    "denseores:dense_deepslate_emerald_ore"
+    "denseores:dense_deepslate_emerald_ore",
+
+    "denseores:dense_nether_quartz_ore",
+    "denseores:dense_nether_gold_ore",
+    "denseores:dense_ancient_debris"
   ]
 }

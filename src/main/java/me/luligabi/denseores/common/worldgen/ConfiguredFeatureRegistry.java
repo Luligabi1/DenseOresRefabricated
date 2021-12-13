@@ -30,216 +30,209 @@ public class ConfiguredFeatureRegistry {
         registerOverworldFeature(DENSE_EMERALD_ORE_CONFIGURED_FEATURE, DENSE_EMERALD_ORE_PLACED_FEATURE, "dense_emerald_ore", DenseOres.CONFIG.canGenerateDenseEmerald);
 
         // Deepslate variants; Coal, Copper and Emerald deepslate ores don't generate at normal circumstances.
-        /*registerOverworldFeature(DENSE_DEEPSLATE_IRON_KEY, DENSE_DEEPSLATE_IRON_ORE, DenseOres.CONFIG.canGenerateDenseIron);
-        registerOverworldFeature(DENSE_DEEPSLATE_GOLD_KEY, DENSE_DEEPSLATE_GOLD_ORE, DenseOres.CONFIG.canGenerateDenseGold);
-        registerOverworldFeature(DENSE_DEEPSLATE_REDSTONE_KEY, DENSE_DEEPSLATE_REDSTONE_ORE, DenseOres.CONFIG.canGenerateDenseRedstone);
-        registerOverworldFeature(DENSE_DEEPSLATE_LAPIS_KEY, DENSE_DEEPSLATE_LAPIS_ORE, DenseOres.CONFIG.canGenerateDenseLapis);
-        registerOverworldFeature(DENSE_DEEPSLATE_DIAMOND_KEY, DENSE_DEEPSLATE_DIAMOND_ORE, DenseOres.CONFIG.canGenerateDenseDiamond);
+        registerOverworldFeature(DENSE_DEEPSLATE_IRON_ORE_CONFIGURED_FEATURE, DENSE_DEEPSLATE_IRON_ORE_PLACED_FEATURE, "dense_deepslate_iron_ore", DenseOres.CONFIG.canGenerateDenseIron);
+        registerOverworldFeature(DENSE_DEEPSLATE_GOLD_ORE_CONFIGURED_FEATURE, DENSE_DEEPSLATE_GOLD_ORE_PLACED_FEATURE, "dense_deepslate_gold_ore", DenseOres.CONFIG.canGenerateDenseGold);
+        registerOverworldFeature(DENSE_DEEPSLATE_REDSTONE_ORE_CONFIGURED_FEATURE, DENSE_DEEPSLATE_REDSTONE_ORE_PLACED_FEATURE, "dense_deepslate_redstone_ore", DenseOres.CONFIG.canGenerateDenseRedstone);
+        registerOverworldFeature(DENSE_DEEPSLATE_LAPIS_ORE_CONFIGURED_FEATURE, DENSE_DEEPSLATE_LAPIS_ORE_PLACED_FEATURE, "dense_deepslate_lapis_ore", DenseOres.CONFIG.canGenerateDenseLapis);
+        registerOverworldFeature(DENSE_DEEPSLATE_DIAMOND_ORE_CONFIGURED_FEATURE, DENSE_DEEPSLATE_DIAMOND_ORE_PLACED_FEATURE, "dense_deepslate_diamond_ore", DenseOres.CONFIG.canGenerateDenseDiamond);
 
         // Nether Ores
-        registerNetherFeature(DENSE_NETHER_QUARTZ_KEY, DENSE_NETHER_QUARTZ_ORE, DenseOres.CONFIG.canGenerateDenseNetherQuartz);
-        registerNetherFeature(DENSE_NETHER_GOLD_KEY, DENSE_NETHER_GOLD_ORE, DenseOres.CONFIG.canGenerateDenseNetherGold);
-        registerNetherFeature(DENSE_ANCIENT_DEBRIS_KEY, DENSE_ANCIENT_DEBRIS, DenseOres.CONFIG.canGenerateDenseAncientDebris);*/
+        registerNetherFeature(DENSE_NETHER_QUARTZ_ORE_CONFIGURED_FEATURE, DENSE_NETHER_QUARTZ_ORE_PLACED_FEATURE, "dense_nether_quartz_ore", DenseOres.CONFIG.canGenerateDenseNetherQuartz);
+        registerNetherFeature(DENSE_NETHER_GOLD_ORE_CONFIGURED_FEATURE, DENSE_NETHER_GOLD_ORE_PLACED_FEATURE, "dense_nether_gold_ore", DenseOres.CONFIG.canGenerateDenseNetherGold);
+        registerNetherFeature(DENSE_ANCIENT_DEBRIS_CONFIGURED_FEATURE, DENSE_ANCIENT_DEBRIS_PLACED_FEATURE, "dense_ancient_debris", DenseOres.CONFIG.canGenerateDenseAncientDebris);
     }
 
     // Dense Coal
-    public static final ConfiguredFeature<?, ?> DENSE_COAL_ORE_CONFIGURED_FEATURE = Feature.ORE
+    private static final ConfiguredFeature<?, ?> DENSE_COAL_ORE_CONFIGURED_FEATURE = Feature.ORE
             .configure(new OreFeatureConfig(
                     new BlockMatchRuleTest(Blocks.COAL_ORE),
                     BlockRegistry.DENSE_COAL_ORE.getDefaultState(),
                     DenseOres.CONFIG.coalVeinSize));
 
-    public static final PlacedFeature DENSE_COAL_ORE_PLACED_FEATURE = DENSE_COAL_ORE_CONFIGURED_FEATURE.withPlacement(
+    private static final PlacedFeature DENSE_COAL_ORE_PLACED_FEATURE = DENSE_COAL_ORE_CONFIGURED_FEATURE.withPlacement(
             CountPlacementModifier.of(DenseOres.CONFIG.coalChunkOdds),
             SquarePlacementModifier.of(),
             HeightRangePlacementModifier.uniform(YOffset.fixed(DenseOres.CONFIG.coalMinHeight), YOffset.fixed(DenseOres.CONFIG.coalMaxHeight)));
 
     // Dense Copper
-    public static final ConfiguredFeature<?, ?> DENSE_COPPER_ORE_CONFIGURED_FEATURE = Feature.ORE
+    private static final ConfiguredFeature<?, ?> DENSE_COPPER_ORE_CONFIGURED_FEATURE = Feature.ORE
             .configure(new OreFeatureConfig(
                     new BlockMatchRuleTest(Blocks.COPPER_ORE),
                     BlockRegistry.DENSE_COPPER_ORE.getDefaultState(),
                     DenseOres.CONFIG.copperVeinSize));
 
-    public static final PlacedFeature DENSE_COPPER_ORE_PLACED_FEATURE = DENSE_COPPER_ORE_CONFIGURED_FEATURE.withPlacement( //TODO: This used triangleRange rather than uniformRange; check if it makes any difference.
+    private static final PlacedFeature DENSE_COPPER_ORE_PLACED_FEATURE = DENSE_COPPER_ORE_CONFIGURED_FEATURE.withPlacement( //TODO: This used triangleRange rather than uniformRange; check if it makes any difference.
             CountPlacementModifier.of(DenseOres.CONFIG.copperChunkOdds),
             SquarePlacementModifier.of(),
             HeightRangePlacementModifier.uniform(YOffset.fixed(DenseOres.CONFIG.copperMinHeight), YOffset.fixed(DenseOres.CONFIG.copperMaxHeight)));
 
     // Dense Iron
-    public static final ConfiguredFeature<?, ?> DENSE_IRON_ORE_CONFIGURED_FEATURE = Feature.ORE
+    private static final ConfiguredFeature<?, ?> DENSE_IRON_ORE_CONFIGURED_FEATURE = Feature.ORE
             .configure(new OreFeatureConfig(
                     new BlockMatchRuleTest(Blocks.IRON_ORE),
                     BlockRegistry.DENSE_IRON_ORE.getDefaultState(),
                     DenseOres.CONFIG.ironVeinSize));
 
-    public static final PlacedFeature DENSE_IRON_ORE_PLACED_FEATURE = DENSE_IRON_ORE_CONFIGURED_FEATURE.withPlacement(
+    private static final PlacedFeature DENSE_IRON_ORE_PLACED_FEATURE = DENSE_IRON_ORE_CONFIGURED_FEATURE.withPlacement(
             CountPlacementModifier.of(DenseOres.CONFIG.ironChunkOdds),
             SquarePlacementModifier.of(),
             HeightRangePlacementModifier.uniform(YOffset.fixed(DenseOres.CONFIG.ironMinHeight), YOffset.fixed(DenseOres.CONFIG.ironMaxHeight)));
 
     // Dense Gold
-    public static final ConfiguredFeature<?, ?> DENSE_GOLD_ORE_CONFIGURED_FEATURE = Feature.ORE
+    private static final ConfiguredFeature<?, ?> DENSE_GOLD_ORE_CONFIGURED_FEATURE = Feature.ORE
             .configure(new OreFeatureConfig(
                     new BlockMatchRuleTest(Blocks.GOLD_ORE),
                     BlockRegistry.DENSE_GOLD_ORE.getDefaultState(),
                     DenseOres.CONFIG.goldVeinSize));
 
-    public static final PlacedFeature DENSE_GOLD_ORE_PLACED_FEATURE = DENSE_GOLD_ORE_CONFIGURED_FEATURE.withPlacement(
+    private static final PlacedFeature DENSE_GOLD_ORE_PLACED_FEATURE = DENSE_GOLD_ORE_CONFIGURED_FEATURE.withPlacement(
             CountPlacementModifier.of(DenseOres.CONFIG.goldChunkOdds),
             SquarePlacementModifier.of(),
             HeightRangePlacementModifier.uniform(YOffset.fixed(DenseOres.CONFIG.goldMinHeight), YOffset.fixed(DenseOres.CONFIG.goldMaxHeight)));
 
     // Dense Redstone
-    public static final ConfiguredFeature<?, ?> DENSE_REDSTONE_ORE_CONFIGURED_FEATURE = Feature.ORE
+    private static final ConfiguredFeature<?, ?> DENSE_REDSTONE_ORE_CONFIGURED_FEATURE = Feature.ORE
             .configure(new OreFeatureConfig(
                     new BlockMatchRuleTest(Blocks.REDSTONE_ORE),
                     BlockRegistry.DENSE_REDSTONE_ORE.getDefaultState(),
                     DenseOres.CONFIG.redstoneVeinSize));
 
-    public static final PlacedFeature DENSE_REDSTONE_ORE_PLACED_FEATURE = DENSE_REDSTONE_ORE_CONFIGURED_FEATURE.withPlacement(
+    private static final PlacedFeature DENSE_REDSTONE_ORE_PLACED_FEATURE = DENSE_REDSTONE_ORE_CONFIGURED_FEATURE.withPlacement(
             CountPlacementModifier.of(DenseOres.CONFIG.redstoneChunkOdds),
             SquarePlacementModifier.of(),
             HeightRangePlacementModifier.uniform(YOffset.fixed(DenseOres.CONFIG.redstoneMinHeight), YOffset.fixed(DenseOres.CONFIG.redstoneMaxHeight)));
 
     // Dense Lapis
-    public static final ConfiguredFeature<?, ?> DENSE_LAPIS_ORE_CONFIGURED_FEATURE = Feature.ORE
+    private static final ConfiguredFeature<?, ?> DENSE_LAPIS_ORE_CONFIGURED_FEATURE = Feature.ORE
             .configure(new OreFeatureConfig(
                     new BlockMatchRuleTest(Blocks.LAPIS_ORE),
                     BlockRegistry.DENSE_LAPIS_ORE.getDefaultState(),
                     DenseOres.CONFIG.lapisVeinSize));
 
-    public static final PlacedFeature DENSE_LAPIS_ORE_PLACED_FEATURE = DENSE_LAPIS_ORE_CONFIGURED_FEATURE.withPlacement( //TODO: This used triangleRange rather than uniformRange; check if it makes any difference.
+    private static final PlacedFeature DENSE_LAPIS_ORE_PLACED_FEATURE = DENSE_LAPIS_ORE_CONFIGURED_FEATURE.withPlacement( //TODO: This used triangleRange rather than uniformRange; check if it makes any difference.
             CountPlacementModifier.of(DenseOres.CONFIG.lapisChunkOdds),
             SquarePlacementModifier.of(),
             HeightRangePlacementModifier.uniform(YOffset.fixed(DenseOres.CONFIG.lapisMinHeight), YOffset.fixed(DenseOres.CONFIG.lapisMaxHeight)));
 
     // Dense Diamond
-    public static final ConfiguredFeature<?, ?> DENSE_DIAMOND_ORE_CONFIGURED_FEATURE = Feature.ORE
+    private static final ConfiguredFeature<?, ?> DENSE_DIAMOND_ORE_CONFIGURED_FEATURE = Feature.ORE
             .configure(new OreFeatureConfig(
                     new BlockMatchRuleTest(Blocks.DIAMOND_ORE),
                     BlockRegistry.DENSE_DIAMOND_ORE.getDefaultState(),
                     DenseOres.CONFIG.diamondVeinSize));
 
-    public static final PlacedFeature DENSE_DIAMOND_ORE_PLACED_FEATURE = DENSE_DIAMOND_ORE_CONFIGURED_FEATURE.withPlacement(
+    private static final PlacedFeature DENSE_DIAMOND_ORE_PLACED_FEATURE = DENSE_DIAMOND_ORE_CONFIGURED_FEATURE.withPlacement(
             CountPlacementModifier.of(DenseOres.CONFIG.diamondChunkOdds),
             SquarePlacementModifier.of(),
             HeightRangePlacementModifier.uniform(YOffset.fixed(DenseOres.CONFIG.diamondMinHeight), YOffset.fixed(DenseOres.CONFIG.diamondMaxHeight)));
 
     // Dense Emerald
-    public static final ConfiguredFeature<?, ?> DENSE_EMERALD_ORE_CONFIGURED_FEATURE = Feature.ORE
+    private static final ConfiguredFeature<?, ?> DENSE_EMERALD_ORE_CONFIGURED_FEATURE = Feature.ORE
             .configure(new OreFeatureConfig(
                     new BlockMatchRuleTest(Blocks.EMERALD_ORE),
                     BlockRegistry.DENSE_EMERALD_ORE.getDefaultState(),
                     DenseOres.CONFIG.emeraldVeinSize));
 
-    public static final PlacedFeature DENSE_EMERALD_ORE_PLACED_FEATURE = DENSE_EMERALD_ORE_CONFIGURED_FEATURE.withPlacement(
+    private static final PlacedFeature DENSE_EMERALD_ORE_PLACED_FEATURE = DENSE_EMERALD_ORE_CONFIGURED_FEATURE.withPlacement(
             CountPlacementModifier.of(DenseOres.CONFIG.emeraldChunkOdds),
             SquarePlacementModifier.of(),
             HeightRangePlacementModifier.uniform(YOffset.fixed(DenseOres.CONFIG.emeraldMinHeight), YOffset.fixed(DenseOres.CONFIG.emeraldMaxHeight)));
 
-
-
     // Dense Deepslate Iron
-    /*private static final PlacedFeature DENSE_DEEPSLATE_IRON_ORE = Feature.ORE
+    private static final ConfiguredFeature<?, ?> DENSE_DEEPSLATE_IRON_ORE_CONFIGURED_FEATURE = Feature.ORE
             .configure(new OreFeatureConfig(
                     new BlockMatchRuleTest(Blocks.DEEPSLATE_IRON_ORE),
                     BlockRegistry.DENSE_DEEPSLATE_IRON_ORE.getDefaultState(),
-                    DenseOres.CONFIG.ironVeinSize))
-            .uniformRange(YOffset.getBottom(), YOffset.fixed(DenseOres.CONFIG.deepslateMaxHeight))
-            .spreadHorizontally()
-            .repeat(DenseOres.CONFIG.ironChunkOdds);
+                    DenseOres.CONFIG.ironVeinSize));
 
-    private static final RegistryKey<PlacedFeature> DENSE_DEEPSLATE_IRON_KEY = RegistryKey.of(Registry.PLACED_FEATURE_KEY,
-            new Identifier(DenseOres.MOD_ID, "dense_deepslate_iron_ore"));
+    private static final PlacedFeature DENSE_DEEPSLATE_IRON_ORE_PLACED_FEATURE = DENSE_DEEPSLATE_IRON_ORE_CONFIGURED_FEATURE.withPlacement(
+            CountPlacementModifier.of(DenseOres.CONFIG.ironChunkOdds),
+            SquarePlacementModifier.of(),
+            HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.fixed(DenseOres.CONFIG.deepslateMaxHeight)));
 
     // Dense Deepslate Gold
-    private static final PlacedFeature DENSE_DEEPSLATE_GOLD_ORE = Feature.ORE
+    private static final ConfiguredFeature<?, ?> DENSE_DEEPSLATE_GOLD_ORE_CONFIGURED_FEATURE = Feature.ORE
             .configure(new OreFeatureConfig(
                     new BlockMatchRuleTest(Blocks.DEEPSLATE_GOLD_ORE),
                     BlockRegistry.DENSE_DEEPSLATE_GOLD_ORE.getDefaultState(),
-                    DenseOres.CONFIG.goldVeinSize))
-            .uniformRange(YOffset.getBottom(), YOffset.fixed(DenseOres.CONFIG.deepslateMaxHeight))
-            .spreadHorizontally()
-            .repeat(DenseOres.CONFIG.goldChunkOdds);
+                    DenseOres.CONFIG.goldVeinSize));
 
-    private static final RegistryKey<PlacedFeature> DENSE_DEEPSLATE_GOLD_KEY = RegistryKey.of(Registry.PLACED_FEATURE_KEY,
-            new Identifier(DenseOres.MOD_ID, "dense_deepslate_gold_ore"));
+    private static final PlacedFeature DENSE_DEEPSLATE_GOLD_ORE_PLACED_FEATURE = DENSE_DEEPSLATE_GOLD_ORE_CONFIGURED_FEATURE.withPlacement(
+            CountPlacementModifier.of(DenseOres.CONFIG.goldChunkOdds),
+            SquarePlacementModifier.of(),
+            HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.fixed(DenseOres.CONFIG.deepslateMaxHeight)));
 
     // Dense Deepslate Redstone
-    private static final PlacedFeature DENSE_DEEPSLATE_REDSTONE_ORE = Feature.ORE
+    private static final ConfiguredFeature<?, ?> DENSE_DEEPSLATE_REDSTONE_ORE_CONFIGURED_FEATURE = Feature.ORE
             .configure(new OreFeatureConfig(
                     new BlockMatchRuleTest(Blocks.DEEPSLATE_REDSTONE_ORE),
                     BlockRegistry.DENSE_DEEPSLATE_REDSTONE_ORE.getDefaultState(),
-                    DenseOres.CONFIG.redstoneVeinSize))
-            .uniformRange(YOffset.getBottom(), YOffset.fixed(DenseOres.CONFIG.deepslateMaxHeight))
-            .spreadHorizontally()
-            .repeat(DenseOres.CONFIG.redstoneChunkOdds);
+                    DenseOres.CONFIG.redstoneVeinSize));
 
-    private static final RegistryKey<PlacedFeature> DENSE_DEEPSLATE_REDSTONE_KEY = RegistryKey.of(Registry.PLACED_FEATURE_KEY,
-            new Identifier(DenseOres.MOD_ID, "dense_deepslate_redstone_ore"));
+    private static final PlacedFeature DENSE_DEEPSLATE_REDSTONE_ORE_PLACED_FEATURE = DENSE_DEEPSLATE_REDSTONE_ORE_CONFIGURED_FEATURE.withPlacement(
+            CountPlacementModifier.of(DenseOres.CONFIG.redstoneChunkOdds),
+            SquarePlacementModifier.of(),
+            HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.fixed(DenseOres.CONFIG.deepslateMaxHeight)));
 
     // Dense Deepslate Lapis
-    private static final PlacedFeature DENSE_DEEPSLATE_LAPIS_ORE = Feature.ORE
+    private static final ConfiguredFeature<?, ?> DENSE_DEEPSLATE_LAPIS_ORE_CONFIGURED_FEATURE = Feature.ORE
             .configure(new OreFeatureConfig(
                     new BlockMatchRuleTest(Blocks.DEEPSLATE_LAPIS_ORE),
                     BlockRegistry.DENSE_DEEPSLATE_LAPIS_ORE.getDefaultState(),
-                    DenseOres.CONFIG.lapisVeinSize))
-            .triangleRange(YOffset.fixed(0), YOffset.fixed(DenseOres.CONFIG.deepslateMaxHeight))
-            .spreadHorizontally()
-            .repeat(DenseOres.CONFIG.lapisChunkOdds);
+                    DenseOres.CONFIG.lapisVeinSize));
 
-    private static final RegistryKey<PlacedFeature> DENSE_DEEPSLATE_LAPIS_KEY = RegistryKey.of(Registry.PLACED_FEATURE_KEY,
-            new Identifier(DenseOres.MOD_ID, "dense_deepslate_lapis_ore"));
+    private static final PlacedFeature DENSE_DEEPSLATE_LAPIS_ORE_PLACED_FEATURE = DENSE_DEEPSLATE_LAPIS_ORE_CONFIGURED_FEATURE.withPlacement( //TODO: This used triangleRange rather than uniformRange; check if it makes any difference.
+            CountPlacementModifier.of(DenseOres.CONFIG.lapisChunkOdds),
+            SquarePlacementModifier.of(),
+            HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.fixed(DenseOres.CONFIG.deepslateMaxHeight)));
 
     // Dense Deepslate Diamond
-    private static final PlacedFeature DENSE_DEEPSLATE_DIAMOND_ORE = Feature.ORE
+    private static final ConfiguredFeature<?, ?> DENSE_DEEPSLATE_DIAMOND_ORE_CONFIGURED_FEATURE = Feature.ORE
             .configure(new OreFeatureConfig(
                     new BlockMatchRuleTest(Blocks.DEEPSLATE_DIAMOND_ORE),
                     BlockRegistry.DENSE_DEEPSLATE_DIAMOND_ORE.getDefaultState(),
-                    DenseOres.CONFIG.diamondVeinSize))
-            .uniformRange(YOffset.getBottom(), YOffset.fixed(DenseOres.CONFIG.deepslateMaxHeight))
-            .spreadHorizontally()
-            .repeat(DenseOres.CONFIG.diamondChunkOdds);
+                    DenseOres.CONFIG.diamondVeinSize));
 
-    private static final RegistryKey<PlacedFeature> DENSE_DEEPSLATE_DIAMOND_KEY = RegistryKey.of(Registry.PLACED_FEATURE_KEY,
-            new Identifier(DenseOres.MOD_ID, "dense_deepslate_diamond_ore"));
-
+    private static final PlacedFeature DENSE_DEEPSLATE_DIAMOND_ORE_PLACED_FEATURE = DENSE_DEEPSLATE_DIAMOND_ORE_CONFIGURED_FEATURE.withPlacement( //TODO: This used triangleRange rather than uniformRange; check if it makes any difference.
+            CountPlacementModifier.of(DenseOres.CONFIG.diamondChunkOdds),
+            SquarePlacementModifier.of(),
+            HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.fixed(DenseOres.CONFIG.deepslateMaxHeight)));
 
     // Dense Nether Quartz
-    private static final PlacedFeature DENSE_NETHER_QUARTZ_ORE = Feature.ORE
+    private static final ConfiguredFeature<?, ?> DENSE_NETHER_QUARTZ_ORE_CONFIGURED_FEATURE = Feature.ORE
             .configure(new OreFeatureConfig(
                     new BlockMatchRuleTest(Blocks.NETHER_QUARTZ_ORE),
                     BlockRegistry.DENSE_NETHER_QUARTZ_ORE.getDefaultState(),
-                    DenseOres.CONFIG.netherQuartzVeinSize))
-            .range(ConfiguredFeatures.Decorators.BOTTOM_TO_TOP_OFFSET_10)
-            .spreadHorizontally()
-            .repeat(DenseOres.CONFIG.netherQuartzChunkOdds);
+                    DenseOres.CONFIG.netherQuartzVeinSize));
 
-    private static final RegistryKey<PlacedFeature> DENSE_NETHER_QUARTZ_KEY = RegistryKey.of(Registry.PLACED_FEATURE_KEY,
-            new Identifier(DenseOres.MOD_ID, "dense_nether_quartz_ore"));
+    private static final PlacedFeature DENSE_NETHER_QUARTZ_ORE_PLACED_FEATURE = DENSE_NETHER_QUARTZ_ORE_CONFIGURED_FEATURE.withPlacement(
+            CountPlacementModifier.of(DenseOres.CONFIG.netherQuartzChunkOdds),
+            SquarePlacementModifier.of()/*,
+            HeightRangePlacementModifier.uniform(ConfiguredFeatures.Decorators.BOTTOM_TO_TOP_OFFSET_10)*/); // TODO: Check what this is replaced by
 
     // Dense Nether Gold
-    private static final PlacedFeature DENSE_NETHER_GOLD_ORE = Feature.ORE
+    private static final ConfiguredFeature<?, ?> DENSE_NETHER_GOLD_ORE_CONFIGURED_FEATURE = Feature.ORE
             .configure(new OreFeatureConfig(
                     new BlockMatchRuleTest(Blocks.NETHER_GOLD_ORE),
                     BlockRegistry.DENSE_NETHER_GOLD_ORE.getDefaultState(),
-                    DenseOres.CONFIG.netherGoldVeinSize))
-            .range(ConfiguredFeatures.Decorators.BOTTOM_TO_TOP_OFFSET_10)
-            .spreadHorizontally()
-            .repeat(DenseOres.CONFIG.netherGoldChunkOdds);
+                    DenseOres.CONFIG.netherGoldVeinSize));
 
-    private static final RegistryKey<PlacedFeature> DENSE_NETHER_GOLD_KEY = RegistryKey.of(Registry.PLACED_FEATURE_KEY,
-            new Identifier(DenseOres.MOD_ID, "dense_nether_gold_ore"));
+    private static final PlacedFeature DENSE_NETHER_GOLD_ORE_PLACED_FEATURE = DENSE_NETHER_GOLD_ORE_CONFIGURED_FEATURE.withPlacement(
+            CountPlacementModifier.of(DenseOres.CONFIG.netherGoldChunkOdds),
+            SquarePlacementModifier.of()/*,
+            HeightRangePlacementModifier.uniform(ConfiguredFeatures.Decorators.BOTTOM_TO_TOP_OFFSET_10)*/); // TODO: Check what this is replaced by
 
     // Dense Ancient Debris
-    private static final PlacedFeature DENSE_ANCIENT_DEBRIS = Feature.ORE
+    private static final ConfiguredFeature<?, ?> DENSE_ANCIENT_DEBRIS_CONFIGURED_FEATURE = Feature.ORE
             .configure(new OreFeatureConfig(
                     new BlockMatchRuleTest(Blocks.ANCIENT_DEBRIS),
                     BlockRegistry.DENSE_ANCIENT_DEBRIS.getDefaultState(),
-                    DenseOres.CONFIG.ancientDebrisVeinSize, 1.0F))
-            .triangleRange(YOffset.fixed(DenseOres.CONFIG.ancientDebrisMinHeight), YOffset.fixed(DenseOres.CONFIG.ancientDebrisMaxHeight))
-            .spreadHorizontally();*/
+                    DenseOres.CONFIG.ancientDebrisVeinSize, 1.0F));
+
+    private static final PlacedFeature DENSE_ANCIENT_DEBRIS_PLACED_FEATURE = DENSE_ANCIENT_DEBRIS_CONFIGURED_FEATURE.withPlacement( //TODO: This used triangleRange rather than uniformRange; check if it makes any difference.
+            SquarePlacementModifier.of(),
+            HeightRangePlacementModifier.uniform(YOffset.fixed(DenseOres.CONFIG.ancientDebrisMinHeight), YOffset.fixed(DenseOres.CONFIG.ancientDebrisMaxHeight)));
+
 
     private static void registerOverworldFeature(ConfiguredFeature<?, ?> configuredFeature, PlacedFeature placedFeature, String identifier, boolean enabled) {
         if(!enabled) return;
@@ -251,10 +244,14 @@ public class ConfiguredFeatureRegistry {
                 RegistryKey.of(Registry.PLACED_FEATURE_KEY, new Identifier(DenseOres.MOD_ID, identifier)));
     }
 
-    private static void registerNetherFeature(RegistryKey<PlacedFeature> registryKey, PlacedFeature placedFeature, boolean enabled) {
+    private static void registerNetherFeature(ConfiguredFeature<?, ?> configuredFeature, PlacedFeature placedFeature, String identifier, boolean enabled) {
         if(!enabled) return;
-        Registry.register(BuiltinRegistries.PLACED_FEATURE, registryKey.getValue(), placedFeature);
-        BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Feature.UNDERGROUND_DECORATION, registryKey);
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,
+                new Identifier(DenseOres.MOD_ID, identifier), configuredFeature);
+        Registry.register(BuiltinRegistries.PLACED_FEATURE, new Identifier(DenseOres.MOD_ID, identifier),
+                placedFeature);
+        BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Feature.UNDERGROUND_DECORATION,
+                RegistryKey.of(Registry.PLACED_FEATURE_KEY, new Identifier(DenseOres.MOD_ID, identifier)));
     }
 
 }

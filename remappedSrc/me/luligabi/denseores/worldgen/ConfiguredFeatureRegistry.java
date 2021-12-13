@@ -1,7 +1,7 @@
-package me.luligabi.denseores.worldgen;
+package me.luligabi.denseores.common.worldgen;
 
 import me.luligabi.denseores.DenseOres;
-import me.luligabi.denseores.block.BlockRegistry;
+import me.luligabi.denseores.common.block.BlockRegistry;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.minecraft.block.Blocks;
@@ -254,14 +254,12 @@ public class ConfiguredFeatureRegistry {
     private static final RegistryKey<ConfiguredFeature<?, ?>> DENSE_ANCIENT_DEBRIS_KEY = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
             new Identifier(DenseOres.MOD_ID, "dense_ancient_debris"));
 
-    @SuppressWarnings("deprecation")
     private static void registerOverworldFeature(RegistryKey<ConfiguredFeature<?, ?>> registryKey, ConfiguredFeature<?, ?> configuredFeature, boolean enabled) {
         if(!enabled) return;
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, registryKey.getValue(), configuredFeature);
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_DECORATION, registryKey);
     }
 
-    @SuppressWarnings("deprecation")
     private static void registerNetherFeature(RegistryKey<ConfiguredFeature<?, ?>> registryKey, ConfiguredFeature<?, ?> configuredFeature, boolean enabled) {
         if(!enabled) return;
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, registryKey.getValue(), configuredFeature);

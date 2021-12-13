@@ -1,4 +1,4 @@
-package me.luligabi.denseores.block;
+package me.luligabi.denseores.common.block;
 
 import me.luligabi.denseores.DenseOres;
 import me.luligabi.denseores.mixin.BlocksInvoker;

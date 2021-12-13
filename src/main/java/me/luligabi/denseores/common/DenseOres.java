@@ -1,8 +1,8 @@
-package me.luligabi.denseores;
+package me.luligabi.denseores.common;
 
 import draylar.omegaconfig.OmegaConfig;
-import me.luligabi.denseores.block.BlockRegistry;
-import me.luligabi.denseores.worldgen.ConfiguredFeatureRegistry;
+import me.luligabi.denseores.common.block.BlockRegistry;
+import me.luligabi.denseores.common.worldgen.ConfiguredFeatureRegistry;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.item.ItemGroup;

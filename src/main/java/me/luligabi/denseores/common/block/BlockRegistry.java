@@ -39,21 +39,21 @@ public class BlockRegistry {
     }
 
     // Overworld Ores
-    public static final Block DENSE_COAL_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).requiresTool().breakByTool(FabricToolTags.PICKAXES, 0).strength(3.0F, 3.0F), UniformIntProvider.create(1, 4));
+    public static final Block DENSE_COAL_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).requiresTool().strength(3.0F, 3.0F), UniformIntProvider.create(1, 4));
 
-    public static final Block DENSE_COPPER_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).requiresTool().breakByTool(FabricToolTags.PICKAXES, 1).strength(3.0F, 3.0F));
+    public static final Block DENSE_COPPER_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).requiresTool().strength(3.0F, 3.0F));
 
     public static final Block DENSE_IRON_ORE = new OreBlock(FabricBlockSettings.copy(DENSE_COPPER_ORE));
 
-    public static final Block DENSE_GOLD_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).requiresTool().breakByTool(FabricToolTags.PICKAXES, 2).strength(3.0F, 3.0F));
+    public static final Block DENSE_GOLD_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).requiresTool().strength(3.0F, 3.0F));
 
-    public static final Block DENSE_REDSTONE_ORE = new RedstoneOreBlock(FabricBlockSettings.of(Material.STONE).requiresTool().breakByTool(FabricToolTags.PICKAXES, 2).ticksRandomly().luminance(BlocksInvoker.invokeCreateLightLevelFromLitBlockState(9)).strength(3.0F, 3.0F));
+    public static final Block DENSE_REDSTONE_ORE = new RedstoneOreBlock(FabricBlockSettings.of(Material.STONE).requiresTool().ticksRandomly().luminance(BlocksInvoker.invokeCreateLightLevelFromLitBlockState(9)).strength(3.0F, 3.0F));
 
-    public static final Block DENSE_LAPIS_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).requiresTool().breakByTool(FabricToolTags.PICKAXES, 1).strength(3.0F, 3.0F), UniformIntProvider.create(4, 7));
+    public static final Block DENSE_LAPIS_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).requiresTool().strength(3.0F, 3.0F), UniformIntProvider.create(4, 7));
 
-    public static final Block DENSE_DIAMOND_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).requiresTool().breakByTool(FabricToolTags.PICKAXES, 2).strength(3.0F, 3.0F), UniformIntProvider.create(5, 9));
+    public static final Block DENSE_DIAMOND_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).requiresTool().strength(3.0F, 3.0F), UniformIntProvider.create(5, 9));
 
-    public static final Block DENSE_EMERALD_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).requiresTool().breakByTool(FabricToolTags.PICKAXES, 2).strength(3.0F, 3.0F), UniformIntProvider.create(5, 9));
+    public static final Block DENSE_EMERALD_ORE = new OreBlock(FabricBlockSettings.of(Material.STONE).requiresTool().strength(3.0F, 3.0F), UniformIntProvider.create(5, 9));
 
     // Deepslate variants
     public static final Block DENSE_DEEPSLATE_COAL_ORE = new OreBlock(FabricBlockSettings.copy(DENSE_COAL_ORE).strength(4.5F, 3.0F).sounds(BlockSoundGroup.DEEPSLATE), UniformIntProvider.create(1, 4));

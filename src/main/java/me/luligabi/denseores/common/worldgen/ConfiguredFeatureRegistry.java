@@ -30,11 +30,14 @@ public class ConfiguredFeatureRegistry {
         registerOverworldFeature(DENSE_EMERALD_ORE_CONFIGURED_FEATURE, DENSE_EMERALD_ORE_PLACED_FEATURE, "dense_emerald_ore", DenseOres.CONFIG.canGenerateDenseEmerald);
 
         // Deepslate variants; Coal, Copper and Emerald deepslate ores don't generate at normal circumstances.
+        registerOverworldFeature(DENSE_DEEPSLATE_COAL_ORE_CONFIGURED_FEATURE, DENSE_DEEPSLATE_COAL_ORE_PLACED_FEATURE, "dense_deepslate_coal_ore", DenseOres.CONFIG.canGenerateDenseDeepslateCoal);
+        registerOverworldFeature(DENSE_DEEPSLATE_COPPER_ORE_CONFIGURED_FEATURE, DENSE_DEEPSLATE_COPPER_ORE_PLACED_FEATURE, "dense_deepslate_copper_ore", DenseOres.CONFIG.canGenerateDenseDeepslateCopper);
         registerOverworldFeature(DENSE_DEEPSLATE_IRON_ORE_CONFIGURED_FEATURE, DENSE_DEEPSLATE_IRON_ORE_PLACED_FEATURE, "dense_deepslate_iron_ore", DenseOres.CONFIG.canGenerateDenseIron);
         registerOverworldFeature(DENSE_DEEPSLATE_GOLD_ORE_CONFIGURED_FEATURE, DENSE_DEEPSLATE_GOLD_ORE_PLACED_FEATURE, "dense_deepslate_gold_ore", DenseOres.CONFIG.canGenerateDenseGold);
         registerOverworldFeature(DENSE_DEEPSLATE_REDSTONE_ORE_CONFIGURED_FEATURE, DENSE_DEEPSLATE_REDSTONE_ORE_PLACED_FEATURE, "dense_deepslate_redstone_ore", DenseOres.CONFIG.canGenerateDenseRedstone);
         registerOverworldFeature(DENSE_DEEPSLATE_LAPIS_ORE_CONFIGURED_FEATURE, DENSE_DEEPSLATE_LAPIS_ORE_PLACED_FEATURE, "dense_deepslate_lapis_ore", DenseOres.CONFIG.canGenerateDenseLapis);
         registerOverworldFeature(DENSE_DEEPSLATE_DIAMOND_ORE_CONFIGURED_FEATURE, DENSE_DEEPSLATE_DIAMOND_ORE_PLACED_FEATURE, "dense_deepslate_diamond_ore", DenseOres.CONFIG.canGenerateDenseDiamond);
+        registerOverworldFeature(DENSE_DEEPSLATE_EMERALD_ORE_CONFIGURED_FEATURE, DENSE_DEEPSLATE_EMERALD_ORE_PLACED_FEATURE, "dense_deepslate_emerald_ore", DenseOres.CONFIG.canGenerateDenseDeepslateEmerald);
 
         // Nether Ores
         registerNetherFeature(DENSE_NETHER_QUARTZ_ORE_CONFIGURED_FEATURE, DENSE_NETHER_QUARTZ_ORE_PLACED_FEATURE, "dense_nether_quartz_ore", DenseOres.CONFIG.canGenerateDenseNetherQuartz);
@@ -138,6 +141,30 @@ public class ConfiguredFeatureRegistry {
             SquarePlacementModifier.of(),
             HeightRangePlacementModifier.trapezoid(YOffset.fixed(DenseOres.CONFIG.emeraldMinHeight), YOffset.fixed(DenseOres.CONFIG.emeraldMaxHeight)));
 
+    // Dense Deepslate Coal
+    private static final ConfiguredFeature<?, ?> DENSE_DEEPSLATE_COAL_ORE_CONFIGURED_FEATURE = Feature.ORE
+            .configure(new OreFeatureConfig(
+                    new BlockMatchRuleTest(Blocks.DEEPSLATE_COAL_ORE),
+                    BlockRegistry.DENSE_DEEPSLATE_COAL_ORE.getDefaultState(),
+                    DenseOres.CONFIG.coalVeinSize));
+
+    private static final PlacedFeature DENSE_DEEPSLATE_COAL_ORE_PLACED_FEATURE = DENSE_DEEPSLATE_COAL_ORE_CONFIGURED_FEATURE.withPlacement(
+            CountPlacementModifier.of(DenseOres.CONFIG.coalChunkOdds),
+            SquarePlacementModifier.of(),
+            HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.fixed(DenseOres.CONFIG.deepslateMaxHeight)));
+
+    // Dense Deepslate Copper
+    private static final ConfiguredFeature<?, ?> DENSE_DEEPSLATE_COPPER_ORE_CONFIGURED_FEATURE = Feature.ORE
+            .configure(new OreFeatureConfig(
+                    new BlockMatchRuleTest(Blocks.DEEPSLATE_COPPER_ORE),
+                    BlockRegistry.DENSE_DEEPSLATE_COPPER_ORE.getDefaultState(),
+                    DenseOres.CONFIG.copperVeinSize));
+
+    private static final PlacedFeature DENSE_DEEPSLATE_COPPER_ORE_PLACED_FEATURE = DENSE_DEEPSLATE_COPPER_ORE_CONFIGURED_FEATURE.withPlacement(
+            CountPlacementModifier.of(DenseOres.CONFIG.copperChunkOdds),
+            SquarePlacementModifier.of(),
+            HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.fixed(DenseOres.CONFIG.deepslateMaxHeight)));
+
     // Dense Deepslate Iron
     private static final ConfiguredFeature<?, ?> DENSE_DEEPSLATE_IRON_ORE_CONFIGURED_FEATURE = Feature.ORE
             .configure(new OreFeatureConfig(
@@ -195,6 +222,18 @@ public class ConfiguredFeatureRegistry {
 
     private static final PlacedFeature DENSE_DEEPSLATE_DIAMOND_ORE_PLACED_FEATURE = DENSE_DEEPSLATE_DIAMOND_ORE_CONFIGURED_FEATURE.withPlacement(
             CountPlacementModifier.of(DenseOres.CONFIG.diamondChunkOdds),
+            SquarePlacementModifier.of(),
+            HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.fixed(DenseOres.CONFIG.deepslateMaxHeight)));
+
+    // Dense Deepslate Emerald
+    private static final ConfiguredFeature<?, ?> DENSE_DEEPSLATE_EMERALD_ORE_CONFIGURED_FEATURE = Feature.ORE
+            .configure(new OreFeatureConfig(
+                    new BlockMatchRuleTest(Blocks.DEEPSLATE_EMERALD_ORE),
+                    BlockRegistry.DENSE_DEEPSLATE_EMERALD_ORE.getDefaultState(),
+                    DenseOres.CONFIG.emeraldVeinSize));
+
+    private static final PlacedFeature DENSE_DEEPSLATE_EMERALD_ORE_PLACED_FEATURE = DENSE_DEEPSLATE_EMERALD_ORE_CONFIGURED_FEATURE.withPlacement(
+            CountPlacementModifier.of(DenseOres.CONFIG.emeraldChunkOdds),
             SquarePlacementModifier.of(),
             HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.fixed(DenseOres.CONFIG.deepslateMaxHeight)));
 

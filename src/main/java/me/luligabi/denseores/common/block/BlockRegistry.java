@@ -77,7 +77,7 @@ public class BlockRegistry {
 
     public static final Block DENSE_NETHER_GOLD_ORE = new OreBlock(FabricBlockSettings.copy(Blocks.NETHER_GOLD_ORE), UniformIntProvider.create(1, 3));
 
-    public static final Block DENSE_ANCIENT_DEBRIS = new Block(FabricBlockSettings.of(Material.METAL, MapColor.BLACK).requiresTool().breakByTool(FabricToolTags.PICKAXES, 3).strength(30.0F, 1200.0F).sounds(BlockSoundGroup.ANCIENT_DEBRIS));
+    public static final Block DENSE_ANCIENT_DEBRIS = new Block(FabricBlockSettings.of(Material.METAL, MapColor.BLACK).requiresTool().strength(30.0F, 1200.0F).sounds(BlockSoundGroup.ANCIENT_DEBRIS));
 
     private static void initBlock(String identifier, Block block) {
         Registry.register(Registry.BLOCK, new Identifier(DenseOres.MOD_ID, identifier), block);

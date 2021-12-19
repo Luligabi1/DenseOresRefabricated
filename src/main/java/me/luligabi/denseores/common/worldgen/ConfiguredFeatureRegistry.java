@@ -52,7 +52,7 @@ public class ConfiguredFeatureRegistry {
     private static final PlacedFeature DENSE_COAL_ORE_PLACED_FEATURE = DENSE_COAL_ORE_CONFIGURED_FEATURE.withPlacement(
             CountPlacementModifier.of(DenseOres.CONFIG.coalChunkOdds),
             SquarePlacementModifier.of(),
-            HeightRangePlacementModifier.uniform(YOffset.fixed(DenseOres.CONFIG.coalMinHeight), YOffset.fixed(DenseOres.CONFIG.coalMaxHeight)));
+            HeightRangePlacementModifier.trapezoid(YOffset.fixed(DenseOres.CONFIG.coalMinHeight), YOffset.fixed(DenseOres.CONFIG.coalMaxHeight)));
 
     // Dense Copper
     private static final ConfiguredFeature<?, ?> DENSE_COPPER_ORE_CONFIGURED_FEATURE = Feature.ORE
@@ -61,10 +61,10 @@ public class ConfiguredFeatureRegistry {
                     BlockRegistry.DENSE_COPPER_ORE.getDefaultState(),
                     DenseOres.CONFIG.copperVeinSize));
 
-    private static final PlacedFeature DENSE_COPPER_ORE_PLACED_FEATURE = DENSE_COPPER_ORE_CONFIGURED_FEATURE.withPlacement( //TODO: This used triangleRange rather than uniformRange; check if it makes any difference.
+    private static final PlacedFeature DENSE_COPPER_ORE_PLACED_FEATURE = DENSE_COPPER_ORE_CONFIGURED_FEATURE.withPlacement(
             CountPlacementModifier.of(DenseOres.CONFIG.copperChunkOdds),
             SquarePlacementModifier.of(),
-            HeightRangePlacementModifier.uniform(YOffset.fixed(DenseOres.CONFIG.copperMinHeight), YOffset.fixed(DenseOres.CONFIG.copperMaxHeight)));
+            HeightRangePlacementModifier.trapezoid(YOffset.fixed(DenseOres.CONFIG.copperMinHeight), YOffset.fixed(DenseOres.CONFIG.copperMaxHeight)));
 
     // Dense Iron
     private static final ConfiguredFeature<?, ?> DENSE_IRON_ORE_CONFIGURED_FEATURE = Feature.ORE
@@ -88,7 +88,7 @@ public class ConfiguredFeatureRegistry {
     private static final PlacedFeature DENSE_GOLD_ORE_PLACED_FEATURE = DENSE_GOLD_ORE_CONFIGURED_FEATURE.withPlacement(
             CountPlacementModifier.of(DenseOres.CONFIG.goldChunkOdds),
             SquarePlacementModifier.of(),
-            HeightRangePlacementModifier.uniform(YOffset.fixed(DenseOres.CONFIG.goldMinHeight), YOffset.fixed(DenseOres.CONFIG.goldMaxHeight)));
+            HeightRangePlacementModifier.trapezoid(YOffset.fixed(DenseOres.CONFIG.goldMinHeight), YOffset.fixed(DenseOres.CONFIG.goldMaxHeight)));
 
     // Dense Redstone
     private static final ConfiguredFeature<?, ?> DENSE_REDSTONE_ORE_CONFIGURED_FEATURE = Feature.ORE
@@ -100,7 +100,7 @@ public class ConfiguredFeatureRegistry {
     private static final PlacedFeature DENSE_REDSTONE_ORE_PLACED_FEATURE = DENSE_REDSTONE_ORE_CONFIGURED_FEATURE.withPlacement(
             CountPlacementModifier.of(DenseOres.CONFIG.redstoneChunkOdds),
             SquarePlacementModifier.of(),
-            HeightRangePlacementModifier.uniform(YOffset.fixed(DenseOres.CONFIG.redstoneMinHeight), YOffset.fixed(DenseOres.CONFIG.redstoneMaxHeight)));
+            HeightRangePlacementModifier.trapezoid(YOffset.fixed(DenseOres.CONFIG.redstoneMinHeight), YOffset.fixed(DenseOres.CONFIG.redstoneMaxHeight)));
 
     // Dense Lapis
     private static final ConfiguredFeature<?, ?> DENSE_LAPIS_ORE_CONFIGURED_FEATURE = Feature.ORE
@@ -109,10 +109,10 @@ public class ConfiguredFeatureRegistry {
                     BlockRegistry.DENSE_LAPIS_ORE.getDefaultState(),
                     DenseOres.CONFIG.lapisVeinSize));
 
-    private static final PlacedFeature DENSE_LAPIS_ORE_PLACED_FEATURE = DENSE_LAPIS_ORE_CONFIGURED_FEATURE.withPlacement( //TODO: This used triangleRange rather than uniformRange; check if it makes any difference.
+    private static final PlacedFeature DENSE_LAPIS_ORE_PLACED_FEATURE = DENSE_LAPIS_ORE_CONFIGURED_FEATURE.withPlacement(
             CountPlacementModifier.of(DenseOres.CONFIG.lapisChunkOdds),
             SquarePlacementModifier.of(),
-            HeightRangePlacementModifier.uniform(YOffset.fixed(DenseOres.CONFIG.lapisMinHeight), YOffset.fixed(DenseOres.CONFIG.lapisMaxHeight)));
+            HeightRangePlacementModifier.trapezoid(YOffset.fixed(DenseOres.CONFIG.lapisMinHeight), YOffset.fixed(DenseOres.CONFIG.lapisMaxHeight)));
 
     // Dense Diamond
     private static final ConfiguredFeature<?, ?> DENSE_DIAMOND_ORE_CONFIGURED_FEATURE = Feature.ORE
@@ -124,7 +124,7 @@ public class ConfiguredFeatureRegistry {
     private static final PlacedFeature DENSE_DIAMOND_ORE_PLACED_FEATURE = DENSE_DIAMOND_ORE_CONFIGURED_FEATURE.withPlacement(
             CountPlacementModifier.of(DenseOres.CONFIG.diamondChunkOdds),
             SquarePlacementModifier.of(),
-            HeightRangePlacementModifier.uniform(YOffset.fixed(DenseOres.CONFIG.diamondMinHeight), YOffset.fixed(DenseOres.CONFIG.diamondMaxHeight)));
+            HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(DenseOres.CONFIG.diamondMinHeight), YOffset.aboveBottom(DenseOres.CONFIG.diamondMaxHeight)));
 
     // Dense Emerald
     private static final ConfiguredFeature<?, ?> DENSE_EMERALD_ORE_CONFIGURED_FEATURE = Feature.ORE
@@ -136,7 +136,7 @@ public class ConfiguredFeatureRegistry {
     private static final PlacedFeature DENSE_EMERALD_ORE_PLACED_FEATURE = DENSE_EMERALD_ORE_CONFIGURED_FEATURE.withPlacement(
             CountPlacementModifier.of(DenseOres.CONFIG.emeraldChunkOdds),
             SquarePlacementModifier.of(),
-            HeightRangePlacementModifier.uniform(YOffset.fixed(DenseOres.CONFIG.emeraldMinHeight), YOffset.fixed(DenseOres.CONFIG.emeraldMaxHeight)));
+            HeightRangePlacementModifier.trapezoid(YOffset.fixed(DenseOres.CONFIG.emeraldMinHeight), YOffset.fixed(DenseOres.CONFIG.emeraldMaxHeight)));
 
     // Dense Deepslate Iron
     private static final ConfiguredFeature<?, ?> DENSE_DEEPSLATE_IRON_ORE_CONFIGURED_FEATURE = Feature.ORE
@@ -181,7 +181,7 @@ public class ConfiguredFeatureRegistry {
                     BlockRegistry.DENSE_DEEPSLATE_LAPIS_ORE.getDefaultState(),
                     DenseOres.CONFIG.lapisVeinSize));
 
-    private static final PlacedFeature DENSE_DEEPSLATE_LAPIS_ORE_PLACED_FEATURE = DENSE_DEEPSLATE_LAPIS_ORE_CONFIGURED_FEATURE.withPlacement( //TODO: This used triangleRange rather than uniformRange; check if it makes any difference.
+    private static final PlacedFeature DENSE_DEEPSLATE_LAPIS_ORE_PLACED_FEATURE = DENSE_DEEPSLATE_LAPIS_ORE_CONFIGURED_FEATURE.withPlacement(
             CountPlacementModifier.of(DenseOres.CONFIG.lapisChunkOdds),
             SquarePlacementModifier.of(),
             HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.fixed(DenseOres.CONFIG.deepslateMaxHeight)));
@@ -193,7 +193,7 @@ public class ConfiguredFeatureRegistry {
                     BlockRegistry.DENSE_DEEPSLATE_DIAMOND_ORE.getDefaultState(),
                     DenseOres.CONFIG.diamondVeinSize));
 
-    private static final PlacedFeature DENSE_DEEPSLATE_DIAMOND_ORE_PLACED_FEATURE = DENSE_DEEPSLATE_DIAMOND_ORE_CONFIGURED_FEATURE.withPlacement( //TODO: This used triangleRange rather than uniformRange; check if it makes any difference.
+    private static final PlacedFeature DENSE_DEEPSLATE_DIAMOND_ORE_PLACED_FEATURE = DENSE_DEEPSLATE_DIAMOND_ORE_CONFIGURED_FEATURE.withPlacement(
             CountPlacementModifier.of(DenseOres.CONFIG.diamondChunkOdds),
             SquarePlacementModifier.of(),
             HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.fixed(DenseOres.CONFIG.deepslateMaxHeight)));
@@ -207,8 +207,8 @@ public class ConfiguredFeatureRegistry {
 
     private static final PlacedFeature DENSE_NETHER_QUARTZ_ORE_PLACED_FEATURE = DENSE_NETHER_QUARTZ_ORE_CONFIGURED_FEATURE.withPlacement(
             CountPlacementModifier.of(DenseOres.CONFIG.netherQuartzChunkOdds),
-            SquarePlacementModifier.of()/*,
-            HeightRangePlacementModifier.uniform(ConfiguredFeatures.Decorators.BOTTOM_TO_TOP_OFFSET_10)*/); // TODO: Check what this is replaced by
+            SquarePlacementModifier.of(),
+            HeightRangePlacementModifier.uniform(YOffset.aboveBottom(10), YOffset.belowTop(10)));
 
     // Dense Nether Gold
     private static final ConfiguredFeature<?, ?> DENSE_NETHER_GOLD_ORE_CONFIGURED_FEATURE = Feature.ORE
@@ -219,8 +219,8 @@ public class ConfiguredFeatureRegistry {
 
     private static final PlacedFeature DENSE_NETHER_GOLD_ORE_PLACED_FEATURE = DENSE_NETHER_GOLD_ORE_CONFIGURED_FEATURE.withPlacement(
             CountPlacementModifier.of(DenseOres.CONFIG.netherGoldChunkOdds),
-            SquarePlacementModifier.of()/*,
-            HeightRangePlacementModifier.uniform(ConfiguredFeatures.Decorators.BOTTOM_TO_TOP_OFFSET_10)*/); // TODO: Check what this is replaced by
+            SquarePlacementModifier.of(),
+            HeightRangePlacementModifier.uniform(YOffset.aboveBottom(10), YOffset.belowTop(10)));
 
     // Dense Ancient Debris
     private static final ConfiguredFeature<?, ?> DENSE_ANCIENT_DEBRIS_CONFIGURED_FEATURE = Feature.ORE
@@ -229,7 +229,7 @@ public class ConfiguredFeatureRegistry {
                     BlockRegistry.DENSE_ANCIENT_DEBRIS.getDefaultState(),
                     DenseOres.CONFIG.ancientDebrisVeinSize, 1.0F));
 
-    private static final PlacedFeature DENSE_ANCIENT_DEBRIS_PLACED_FEATURE = DENSE_ANCIENT_DEBRIS_CONFIGURED_FEATURE.withPlacement( //TODO: This used triangleRange rather than uniformRange; check if it makes any difference.
+    private static final PlacedFeature DENSE_ANCIENT_DEBRIS_PLACED_FEATURE = DENSE_ANCIENT_DEBRIS_CONFIGURED_FEATURE.withPlacement(
             SquarePlacementModifier.of(),
             HeightRangePlacementModifier.uniform(YOffset.fixed(DenseOres.CONFIG.ancientDebrisMinHeight), YOffset.fixed(DenseOres.CONFIG.ancientDebrisMaxHeight)));
 

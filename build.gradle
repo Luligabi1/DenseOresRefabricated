@@ -19,7 +19,7 @@ def RELEASE_FILE = "${buildDir}/libs/${archivesBaseName}-${version}.jar"
 
 @SuppressWarnings('GrMethodMayBeStatic')
 def getChangeLog() {
-    return "- Updated to 1.18.x\n- Added option to gen dense deepslate coal, copper and emerald ores."
+    return "- Added polish translation (thanks, joker876!)"
 }
 
 repositories {

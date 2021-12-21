@@ -1,0 +1,25 @@
+{
+  "block.denseores.dense_coal_ore": "Zbita ruda węgla",
+  "block.denseores.dense_copper_ore": "Zbita ruda miedzi",
+  "block.denseores.dense_iron_ore": "Zbita ruda żelaza",
+  "block.denseores.dense_gold_ore": "Zbita ruda złota",
+  "block.denseores.dense_redstone_ore": "Zbita ruda redstone",
+  "block.denseores.dense_lapis_ore": "Zbita ruda lazurytu",
+  "block.denseores.dense_diamond_ore": "Zbita ruda diamentu",
+  "block.denseores.dense_emerald_ore": "Zbita ruda szmaragdu",
+  
+  "block.denseores.dense_deepslate_coal_ore": "Zbita łupkowa ruda węgla",
+  "block.denseores.dense_deepslate_copper_ore": "Zbita łupkowa ruda miedzi",
+  "block.denseores.dense_deepslate_iron_ore": "Zbita łupkowa ruda żelaza",
+  "block.denseores.dense_deepslate_gold_ore": "Zbita łupkowa ruda złota",
+  "block.denseores.dense_deepslate_redstone_ore": "Zbita łupkowa ruda redstone",
+  "block.denseores.dense_deepslate_lapis_ore": "Zbita łupkowa ruda lazurytu",
+  "block.denseores.dense_deepslate_diamond_ore": "Zbita łupkowa ruda diamentu",
+  "block.denseores.dense_deepslate_emerald_ore": "Zbita łupkowa ruda szmaragdu",
+  
+  "block.denseores.dense_nether_quartz_ore": "Zbita ruda kwarcu",
+  "block.denseores.dense_nether_gold_ore": "Zbita netherowa ruda złota",
+  "block.denseores.dense_ancient_debris": "Skompresowane pradawne zgliszcza",
+  
+  "itemGroup.denseores.item_group": "Dense Ores: Refabricated"
+}

@@ -2,7 +2,7 @@ package me.luligabi.denseores.common;
 
 import draylar.omegaconfig.OmegaConfig;
 import me.luligabi.denseores.common.block.BlockRegistry;
-import me.luligabi.denseores.common.worldgen.ConfiguredFeatureRegistry;
+import me.luligabi.denseores.common.worldgen.FeatureRegistry;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.item.ItemGroup;
@@ -14,7 +14,7 @@ public class DenseOres implements ModInitializer {
     @Override
     public void onInitialize() {
         BlockRegistry.init();
-        ConfiguredFeatureRegistry.init();
+        FeatureRegistry.init();
     }
 
     public static final String MOD_ID = "denseores";

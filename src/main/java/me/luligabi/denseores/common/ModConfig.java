@@ -2,6 +2,7 @@ package me.luligabi.denseores.common;
 
 import draylar.omegaconfig.api.Comment;
 import draylar.omegaconfig.api.Config;
+import org.jetbrains.annotations.Nullable;
 
 public class ModConfig implements Config {
 
@@ -180,8 +181,9 @@ public class ModConfig implements Config {
     public int ancientDebrisMaxHeight = 119;
 
     @Override
-    public String getName() {
-        return "denseores";
-    }
+    public String getName() { return DenseOres.MOD_ID; }
+
+    @Override
+    public @Nullable String getModid() { return DenseOres.MOD_ID; }
 
 }

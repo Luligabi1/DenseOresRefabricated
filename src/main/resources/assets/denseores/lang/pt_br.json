@@ -21,6 +21,7 @@
   "block.denseores.dense_nether_gold_ore": "Minério de Ouro do Nether Denso",
   "block.denseores.dense_ancient_debris": "Detritos Ancestrais Densos",
 
+  "config.denseores.denseores": "Dense Ores: Refabricated - Configurações (Requer reinício!)",
 
   "itemGroup.denseores.item_group": "Dense Ores: Refabricated"
 }

@@ -21,6 +21,7 @@
   "block.denseores.dense_nether_gold_ore": "Dense Nether Gold Ore",
   "block.denseores.dense_ancient_debris": "Dense Ancient Debris",
 
+  "config.denseores.denseores": "Dense Ores: Refabricated - Configuration (Requires restart!)",
 
   "itemGroup.denseores.item_group": "Dense Ores: Refabricated"
 }

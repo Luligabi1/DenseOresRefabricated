@@ -19,11 +19,13 @@ def RELEASE_FILE = "${buildDir}/libs/${archivesBaseName}-${version}.jar"
 
 @SuppressWarnings('GrMethodMayBeStatic')
 def getChangeLog() {
-    return "- Added polish translation (thanks, joker876!)"
+    return ""
 }
 
 repositories {
     maven { url 'https://jitpack.io' }
+    maven { url "https://maven.shedaniel.me/" }
+    maven { url 'https://maven.terraformersmc.com/releases/' }
 }
 
 dependencies {
@@ -35,6 +37,13 @@ dependencies {
 
     modImplementation "com.github.Draylar.omega-config:omega-config-base:${project.omega_config_version}"
     include "com.github.Draylar.omega-config:omega-config-base:${project.omega_config_version}"
+
+    modImplementation "com.github.Draylar.omega-config:omega-config-gui:${project.omega_config_version}"
+    include "com.github.Draylar.omega-config:omega-config-base-gui:${project.omega_config_version}"
+
+
+    modCompileOnly "com.terraformersmc:modmenu:${project.modmenu_version}"
+    modRuntimeOnly "com.terraformersmc:modmenu:${project.modmenu_version}"
 }
 
 processResources {

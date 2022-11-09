@@ -21,7 +21,89 @@
   "block.denseores.dense_nether_gold_ore": "Minério de Ouro do Nether Denso",
   "block.denseores.dense_ancient_debris": "Detritos Ancestrais Densos",
 
-  "config.denseores.denseores": "Dense Ores: Refabricated - Configurações (Requer reinício!)",
 
-  "itemGroup.denseores.item_group": "Dense Ores: Refabricated"
+  "itemGroup.denseores.item_group": "Dense Ores: Refabricated",
+
+
+  "configOption.denseores.canGenerate.tooltip": "Se este minério pode ser gerado no mundo",
+  "configOption.denseores.canGenerate.tooltip.2": "Este minério não é gerado no vanilla, não ative esta opção a não ser que você tenha worldgen customizada.",
+  "configOption.denseores.veinSize.tooltip": "A quantidade máxima deste minério que pode ser gerada em uma única veia",
+  "configOption.denseores.minHeight.tooltip": "A camada (Y) mais baixa em que este minério poderá ser gerado",
+  "configOption.denseores.maxHeight.tooltip": "A camada (Y) mais alta em que este minério poderá ser gerado",
+  "configOption.denseores.chunkOdds.tooltip": "A chance deste minério gerar em uma chunk. Quanto maior, mais provável",
+
+
+  "configOption.denseores.canGenerateDenseCoal": "Gerar Carvão Denso?",
+  "configOption.denseores.coalVeinSize": "Tamanho da Veia de Carvão Denso",
+  "configOption.denseores.coalMinHeight": "Altura Mínima do Minério de Carvão Denso",
+  "configOption.denseores.coalMaxHeight": "Altura Máxima do Minério de Carvão Denso",
+  "configOption.denseores.coalChunkOdds": "Chance por Chunk do Minério de Carvão Denso",
+
+  "configOption.denseores.canGenerateDenseCopper": "Gerar Cobre Denso?",
+  "configOption.denseores.copperVeinSize": "Tamanho da Veia de Cobre Denso",
+  "configOption.denseores.copperMinHeight": "Altura Mínima do Minério de Cobre Denso",
+  "configOption.denseores.copperMaxHeight": "Altura Máxima do Minério de Cobre Denso",
+  "configOption.denseores.copperChunkOdds": "Chance por Chunk do Minério de Cobre Denso",
+
+  "configOption.denseores.canGenerateDenseIron": "Gerar Ferro Denso?",
+  "configOption.denseores.ironVeinSize": "Tamanho da Veia de Ferro Denso",
+  "configOption.denseores.ironMinHeight": "Altura Mínima do Minério de Ferro Denso",
+  "configOption.denseores.ironMaxHeight": "Altura Máxima do Minério de Ferro Denso",
+  "configOption.denseores.ironChunkOdds": "Chance por Chunk do Minério de Ferro Denso",
+
+  "configOption.denseores.canGenerateDenseGold": "Gerar Ouro Denso?",
+  "configOption.denseores.goldVeinSize": "Tamanho da Veia de Ouro Denso",
+  "configOption.denseores.goldMinHeight": "Altura Mínima do Minério de Ouro Denso",
+  "configOption.denseores.goldMaxHeight": "Altura Máxima do Minério de Ouro Denso",
+  "configOption.denseores.goldChunkOdds": "Chance por Chunk do Minério de Ouro Denso",
+
+  "configOption.denseores.canGenerateDenseRedstone": "Gerar Redstone Densa?",
+  "configOption.denseores.redstoneVeinSize": "Tamanho da Veia de Redstone Densa",
+  "configOption.denseores.redstoneMinHeight": "Altura Mínima do Minério de Redstone Denso",
+  "configOption.denseores.redstoneMaxHeight": "Altura Máxima do Minério de Redstone Denso",
+  "configOption.denseores.redstoneChunkOdds": "Chance por Chunk do Minério de Redstone Denso",
+
+  "configOption.denseores.canGenerateDenseLapis": "Gerar Lápis-Lazúli Denso?",
+  "configOption.denseores.lapisVeinSize": "Tamanho da Veia de Lápis-Lazúli Denso",
+  "configOption.denseores.lapisMinHeight": "Altura Mínima do Minério de Lápis-Lazúli Denso",
+  "configOption.denseores.lapisMaxHeight": "Altura Máxima do Minério de Lápis-Lazúli Denso",
+  "configOption.denseores.lapisChunkOdds": "Chance por Chunk do Lápis-Lazuli Denso",
+
+  "configOption.denseores.canGenerateDenseDiamond": "Gerar Diamante Denso?",
+  "configOption.denseores.diamondVeinSize": "Tamanho da Veia de Diamante Denso",
+  "configOption.denseores.diamondMinHeight": "Altura Mínima do Minério de Diamante Denso",
+  "configOption.denseores.diamondMaxHeight": "Altura Máxima do Minério de Diamante Denso",
+  "configOption.denseores.diamondChunkOdds": "Chance por Chunk do Minério de Diamante Denso",
+
+  "configOption.denseores.canGenerateDenseEmerald": "Gerar Esmeralda Densa?",
+  "configOption.denseores.emeraldVeinSize": "Tamanho da Veia de Esmeralda Densa",
+  "configOption.denseores.emeraldMinHeight": "Altura Mínima do Minério de Esmeralda Denso",
+  "configOption.denseores.emeraldMaxHeight": "Altura Máxima do do Minério de Esmeralda Denso",
+  "configOption.denseores.emeraldChunkOdds": "Chance por Chunk do Minério de Esmeralda Denso",
+
+
+  "configCategory.denseores.deepslate_ores": "Minérios de Ardósia",
+
+  "configOption.denseores.deepslateMaxHeight": "Altura Máxima dos Minérios de Ardósia",
+  "configOption.denseores.deepslateMaxHeight.tooltip": "A camada (Y) mais alta em que Minérios de Ardósia poderão ser gerados",
+
+  "configOption.denseores.canGenerateDenseDeepslateCoal": "Gerar Minério de Carvão de Ardósia Denso?",
+  "configOption.denseores.canGenerateDenseDeepslateCopper": "Gerar Minério de Cobre de Ardósia Denso?",
+  "configOption.denseores.canGenerateDenseDeepslateEmerald": "Gerar Minério de Esmeralda de Ardósia Denso?",
+
+
+  "configCategory.denseores.nether_ores": "Minérios do Nether",
+
+  "configOption.denseores.canGenerateDenseNetherQuartz": "Gerar Quartzo do Nether Denso?",
+  "configOption.denseores.netherQuartzVeinSize": "Tamanho da Veia de Quartzo do Nether Denso",
+  "configOption.denseores.netherQuartzChunkOdds": "Chance por Chunk do Minério de Quartzo do Nether Denso",
+
+  "configOption.denseores.canGenerateDenseNetherGold": "Gerar Ouro do Nether Denso?",
+  "configOption.denseores.netherGoldVeinSize": "Tamanho da Veia de Ouro do Nether Denso",
+  "configOption.denseores.netherGoldChunkOdds": "Chance por Chunk do Minério de Ouro do Nether Denso",
+
+  "configOption.denseores.canGenerateDenseAncientDebris": "Gerar Detritos Ancestrais Densos?",
+  "configOption.denseores.ancientDebrisVeinSize": "Tamanho da Veia de Detritos Ancestrais Densos",
+  "configOption.denseores.ancientDebrisMinHeight": "Altura Mínima dos Detritos Ancestrais Densos",
+  "configOption.denseores.ancientDebrisMaxHeight": "Altura Máxima dos Detritos Ancestrais Densos"
 }

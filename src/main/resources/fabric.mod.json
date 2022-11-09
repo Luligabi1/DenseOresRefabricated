@@ -23,8 +23,8 @@
     "main": [
       "me.luligabi.denseores.common.DenseOres"
     ],
-    "client": [
-      "me.luligabi.denseores.client.DenseOresClient"
+    "modmenu": [
+      "me.luligabi.denseores.client.compat.modmenu.ConfigScreenEntrypoint"
     ]
   },
   "mixins": [
@@ -33,6 +33,6 @@
   "depends": {
     "fabricloader": ">=0.11.3",
     "fabric": "*",
-    "minecraft": ">=1.18.2"
+    "minecraft": "1.19.x"
   }
 }

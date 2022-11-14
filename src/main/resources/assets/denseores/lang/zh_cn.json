@@ -1,0 +1,27 @@
+{
+  "block.denseores.dense_coal_ore": "致密煤矿石",
+  "block.denseores.dense_copper_ore": "致密铜矿石",
+  "block.denseores.dense_iron_ore": "致密铁矿石",
+  "block.denseores.dense_gold_ore": "致密金矿石",
+  "block.denseores.dense_redstone_ore": "致密红石矿石",
+  "block.denseores.dense_lapis_ore": "致密 青金石矿石",
+  "block.denseores.dense_diamond_ore": "致密钻石矿石",
+  "block.denseores.dense_emerald_ore": "致密绿宝石矿石",
+
+  "block.denseores.dense_deepslate_coal_ore": "深层致密煤矿石",
+  "block.denseores.dense_deepslate_copper_ore": "深层致密铜矿石",
+  "block.denseores.dense_deepslate_iron_ore": "深层致密铁矿石",
+  "block.denseores.dense_deepslate_gold_ore": "深层致密金矿石",
+  "block.denseores.dense_deepslate_redstone_ore": "深层致密红石矿石",
+  "block.denseores.dense_deepslate_lapis_ore": "深层致密 青金石矿石",
+  "block.denseores.dense_deepslate_diamond_ore": "深层致密钻石矿石",
+  "block.denseores.dense_deepslate_emerald_ore": "深层致密绿宝石矿石",
+
+  "block.denseores.dense_nether_quartz_ore": "致密下界石英矿石",
+  "block.denseores.dense_nether_gold_ore": "致密下界金矿石",
+  "block.denseores.dense_ancient_debris": "致密下界合金",
+
+  "config.denseores.denseores": "致密矿石: Fabric复兴版- 配置文件 (需要重新启动游戏！)",
+
+  "itemGroup.denseores.item_group": "致密矿石: Fabric复兴版"
+}

@@ -1,0 +1,109 @@
+{
+  "block.denseores.dense_coal_ore": "致密煤矿石",
+  "block.denseores.dense_copper_ore": "致密铜矿石",
+  "block.denseores.dense_iron_ore": "致密铁矿石",
+  "block.denseores.dense_gold_ore": "致密金矿石",
+  "block.denseores.dense_redstone_ore": "致密红石矿石",
+  "block.denseores.dense_lapis_ore": "致密 青金石矿石",
+  "block.denseores.dense_diamond_ore": "致密钻石矿石",
+  "block.denseores.dense_emerald_ore": "致密绿宝石矿石",
+
+  "block.denseores.dense_deepslate_coal_ore": "深层致密煤矿石",
+  "block.denseores.dense_deepslate_copper_ore": "深层致密铜矿石",
+  "block.denseores.dense_deepslate_iron_ore": "深层致密铁矿石",
+  "block.denseores.dense_deepslate_gold_ore": "深层致密金矿石",
+  "block.denseores.dense_deepslate_redstone_ore": "深层致密红石矿石",
+  "block.denseores.dense_deepslate_lapis_ore": "深层致密 青金石矿石",
+  "block.denseores.dense_deepslate_diamond_ore": "深层致密钻石矿石",
+  "block.denseores.dense_deepslate_emerald_ore": "深层致密绿宝石矿石",
+
+  "block.denseores.dense_nether_quartz_ore": "致密下界石英矿石",
+  "block.denseores.dense_nether_gold_ore": "致密下界金矿石",
+  "block.denseores.dense_ancient_debris": "致密远古残骸",
+
+
+  "itemGroup.denseores.item_group": "致密矿石: Fabric复兴版",
+
+
+  "configOption.denseores.canGenerate.tooltip": "能否生成",
+  "configOption.denseores.canGenerate.tooltip.2": "此类矿石不在原版中生成，请勿启用，除非你使用了自定义世界生成",
+  "configOption.denseores.veinSize.tooltip": "矿脉中的矿石数量",
+  "configOption.denseores.minHeight.tooltip": "该矿物生成的高度下限",
+  "configOption.denseores.maxHeight.tooltip": "该矿石生成的最高上限",
+  "configOption.denseores.chunkOdds.tooltip": "区块内该矿石的生成率，此值越高，生成越频繁",
+
+
+  "configOption.denseores.canGenerateDenseCoal": "是否生成致密煤矿石？",
+  "configOption.denseores.coalVeinSize": "致密煤矿石矿脉大小",
+  "configOption.denseores.coalMinHeight": "致密煤矿石生成高度下限",
+  "configOption.denseores.coalMaxHeight": "致密煤矿石生成高度上限",
+  "configOption.denseores.coalChunkOdds": "致密煤矿石区块生成率",
+
+  "configOption.denseores.canGenerateDenseCopper": "是否生成致密铜矿石？",
+  "configOption.denseores.copperVeinSize": "致密铜矿石矿脉大小",
+  "configOption.denseores.copperMinHeight": "致密铜矿石生成高度下限",
+  "configOption.denseores.copperMaxHeight": "致密铜矿石生成高度上限",
+  "configOption.denseores.copperChunkOdds": "致密铜矿石区块生成率",
+
+  "configOption.denseores.canGenerateDenseIron": "是否生成致密铁矿石？",
+  "configOption.denseores.ironVeinSize": "致密铁矿石矿脉大小",
+  "configOption.denseores.ironMinHeight": "致密铁矿石生成高度下限",
+  "configOption.denseores.ironMaxHeight": "致密铁矿石生成高度上限",
+  "configOption.denseores.ironChunkOdds": "致密铁矿石区块生成率",
+
+  "configOption.denseores.canGenerateDenseGold": "是否生成致密金矿石？",
+  "configOption.denseores.goldVeinSize": "致密金矿石矿脉大小",
+  "configOption.denseores.goldMinHeight": "致密金矿石生成高度下限",
+  "configOption.denseores.goldMaxHeight": "致密金矿石生成高度上限",
+  "configOption.denseores.goldChunkOdds": "致密金矿石区块生成率",
+
+  "configOption.denseores.canGenerateDenseRedstone": "是否生成致密红石矿石？",
+  "configOption.denseores.redstoneVeinSize": "致密红石矿石矿脉大小",
+  "configOption.denseores.redstoneMinHeight": "致密红石矿石生成高度下限",
+  "configOption.denseores.redstoneMaxHeight": "致密红石矿石生成高度上限",
+  "configOption.denseores.redstoneChunkOdds": "致密红石矿石区块生成率",
+
+  "configOption.denseores.canGenerateDenseLapis": "是否生成致密青金石矿石？",
+  "configOption.denseores.lapisVeinSize": "致密青金石矿石矿脉大小",
+  "configOption.denseores.lapisMinHeight": "致密青金石矿石生成高度下限",
+  "configOption.denseores.lapisMaxHeight": "致密青金石矿石生成高度上限",
+  "configOption.denseores.lapisChunkOdds": "致密青金石矿石区块生成率",
+
+  "configOption.denseores.canGenerateDenseDiamond": "是否生成致密钻石矿石？",
+  "configOption.denseores.diamondVeinSize": "致密钻石矿石矿脉大小",
+  "configOption.denseores.diamondMinHeight": "致密钻石矿石生成高度下限",
+  "configOption.denseores.diamondMaxHeight": "致密钻石矿石生成高度上限",
+  "configOption.denseores.diamondChunkOdds": "致密钻石矿石区块生成率",
+
+  "configOption.denseores.canGenerateDenseEmerald": "是否生成致密绿宝石矿石？",
+  "configOption.denseores.emeraldVeinSize": "致密绿宝石矿石矿脉大小",
+  "configOption.denseores.emeraldMinHeight": "致密绿宝石矿石生成高度下限",
+  "configOption.denseores.emeraldMaxHeight": "致密绿宝石矿石生成高度上限",
+  "configOption.denseores.emeraldChunkOdds": "致密绿宝石矿石区块生成率",
+
+
+  "configCategory.denseores.deepslate_ores": "深层矿石",
+
+  "configOption.denseores.deepslateMaxHeight": "深层矿石高度上限",
+  "configOption.denseores.deepslateMaxHeight.tooltip": "深层致密矿石的最高生成高度",
+
+  "configOption.denseores.canGenerateDenseDeepslateCoal": "是否生成深层致密煤矿石？",
+  "configOption.denseores.canGenerateDenseDeepslateCopper": "是否生成深层致密铜矿石？",
+  "configOption.denseores.canGenerateDenseDeepslateEmerald": "是否生成深层致密绿宝石矿石？",
+
+
+  "configCategory.denseores.nether_ores": "下界矿石",
+
+  "configOption.denseores.canGenerateDenseNetherQuartz": "是否生成致密下界石英矿石？",
+  "configOption.denseores.netherQuartzVeinSize": "致密下界石英矿石矿脉大小",
+  "configOption.denseores.netherQuartzChunkOdds": "致密下界石英矿石区块生成率",
+
+  "configOption.denseores.canGenerateDenseNetherGold": "是否生成致密下界金矿石？",
+  "configOption.denseores.netherGoldVeinSize": "致密下界金矿石矿脉大小",
+  "configOption.denseores.netherGoldChunkOdds": "致密下界金矿石区块生成率",
+
+  "configOption.denseores.canGenerateDenseAncientDebris": "是否生成致密远古残骸？",
+  "configOption.denseores.ancientDebrisVeinSize": "致密远古残骸矿脉大小",
+  "configOption.denseores.ancientDebrisMinHeight": "致密远古残骸的生成高度下限",
+  "configOption.denseores.ancientDebrisMaxHeight": "致密远古残骸的生成高度上限"
+}
